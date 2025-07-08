@@ -18,7 +18,7 @@ document.querySelectorAll("#sidebar a").forEach(link => {
 
 
 AOS.init({
-  duration: 800,
+  duration: 500,
   offset: 120,
   once: false // ensures it only animates once
 });
