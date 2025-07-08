@@ -203,8 +203,15 @@
                     <img src="./images/gamingarcade.png" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
                         <h3 class="text-red-400 font-semibold text-lg">Gaming Arcade</h3>
-                        <a href="https://gaming-arcade-sigma.vercel.app/"
-                            class="text-sm text-red-300 hover:text-red-500 hover:underline">🌐 Live Demo</a>
+                        <div class="flex gap-2">
+                            <button class="bg-gray-700 px-3 py-0 rounded-full"><a
+                                    href="https://gaming-arcade-sigma.vercel.app/"
+                                    class="text-sm text-red-300 hover:text-white">🌐 Live Demo</a></button>
+                            <button class="bg-gray-900 px-3 py-0 rounded-full"><a
+                                    href="https://github.com/harshgupta-16/GamingArcade.github.io"
+                                    class="text-sm text-red-300 hover:text-white hover:font-semibold "><i
+                                        class="fab fa-github"></i>&nbsp; Code</a></button>
+                        </div>
                     </div>
                     <p class="text-sm text-gray-300 mb-2">Built a responsive gaming arcade with 4 interactive web
                         games<i> (Tic-Tac-Toe, Block Breaker, Memory Card Game, and Candy Crush clone)</i></p>
@@ -235,8 +242,15 @@
                     <img src="./images/todo.png" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
                         <h3 class="text-green-400 font-semibold text-lg">Todo App</h3>
-                        <a href="https://todo-alpha-henna-32.vercel.app/"
-                            class="text-sm text-green-300 hover:text-green-500 hover:underline">🌐 Live Demo</a>
+                        <div class="flex gap-2">
+                            <button class="bg-gray-700 px-3 py-0 rounded-full"><a
+                                    href="https://todo-alpha-henna-32.vercel.app/"
+                                    class="text-sm text-green-300 hover:text-white">🌐 Live Demo</a></button>
+                            <button class="bg-gray-900 px-3 py-0 rounded-full"><a
+                                    href="https://github.com/harshgupta-16/Todo"
+                                    class="text-sm text-green-300 hover:text-white hover:font-semibold "><i
+                                        class="fab fa-github"></i>&nbsp; Code</a></button>
+                        </div>
                     </div>
                     <p class="text-sm text-gray-300 mb-2">Add, edit, delete, and filter tasks with local storage.</p>
                     <div class="flex items-center gap-3 mt-5">
@@ -268,8 +282,15 @@
                     <img src="./images/portfolio.png" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
                         <h3 class="text-yellow-400 font-semibold text-lg">Portfolio</h3>
-                        <a href="https://portfolio-github-io-two-xi.vercel.app/"
-                            class="text-sm text-yellow-300 hover:text-yellow-500 hover:underline">🌐 Live Demo</a>
+                        <div class="flex gap-2">
+                            <button class="bg-gray-700 px-3 py-0 rounded-full"><a
+                                    href="https://portfolio-github-io-two-xi.vercel.app/"
+                                    class="text-sm text-yellow-300 hover:text-white">🌐 Live Demo</a></button>
+                            <button class="bg-gray-900 px-3 py-0 rounded-full"><a
+                                    href="https://github.com/harshgupta-16/Portfolio.github.io"
+                                    class="text-sm text-yellow-300 hover:text-white hover:font-semibold "><i
+                                        class="fab fa-github"></i>&nbsp; Code</a></button>
+                        </div>
                     </div>
                     <p class="text-sm text-gray-300 mb-2">Built a personal portfolio to showcase projects, skills, and
                         achievements with responsive design and smooth animations.</p>
@@ -333,70 +354,78 @@
     <!-- Skills -->
     <section id="skills" class="py-10 px-6 text-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-5xl font-bold text-center py-8 mb-8 text-blue-500" data-aos="fade-up">
-                Skills
-            </h2>
+            <h2 class="text-5xl font-bold text-center py-8 mb-8 text-blue-500" data-aos="fade-up">Skills</h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
 
+                <!-- Languages -->
                 <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
                     data-aos="fade-up">
                     <h3 class="text-xl font-semibold text-blue-400 mb-4">Languages</h3>
-                    <ul class="space-y-3 text-gray-300 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="code" class="text-red-500"></i> C / C++</li>
-                        <li class="flex items-center gap-2"><i data-lucide="file-code" class="text-orange-500"></i> HTML
-                        </li>
-                        <li class="flex items-center gap-2"><i data-lucide="brush" class="text-blue-500"></i> CSS</li>
-                        <li class="flex items-center gap-2"><i data-lucide="code-2" class="text-yellow-400"></i>
-                            JavaScript</li>
-                        <li class="flex items-center gap-2"><i data-lucide="database" class="text-green-500"></i> SQL
-                        </li>
-                        <li class="flex items-center gap-2"><i data-lucide="function-square"
-                                class="text-purple-500"></i> MATLAB</li>
-                    </ul>
+                    <div class="space-y-3 text-gray-300 text-sm">
+                        <div class="flex items-center gap-2"><i class="fas fa-code text-red-500"></i><span>C /
+                                C++</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fab fa-html5 text-orange-500"></i><span>HTML</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fab fa-css3-alt text-blue-500"></i><span>CSS</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fab fa-js text-yellow-400"></i><span>JavaScript</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fas fa-database text-green-500"></i><span>SQL</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fas fa-square-root-variable text-purple-500"></i><span>MATLAB</span></div>
+                    </div>
                 </div>
 
+                <!-- Frameworks -->
                 <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
                     data-aos="fade-up">
                     <h3 class="text-xl font-semibold text-green-400 mb-4">Libraries & Frameworks</h3>
-                    <ul class="space-y-3 text-gray-300 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="atom" class="text-cyan-400"></i> React.js
-                        </li>
-                        <li class="flex items-center gap-2"><i data-lucide="box" class="text-pink-500"></i> Bootstrap
-                        </li>
-                        <li class="flex items-center gap-2"><i data-lucide="wind" class="text-sky-400"></i> Tailwind CSS
-                        </li>
-                        <li class="flex items-center gap-2"><i data-lucide="forward" class="text-gray-300"></i> Next.js
-                        </li>
-                    </ul>
+                    <div class="space-y-3 text-gray-300 text-sm">
+                        <div class="flex items-center gap-2"><i
+                                class="fab fa-react text-cyan-400"></i><span>React.js</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fab fa-bootstrap text-pink-500"></i><span>Bootstrap</span></div>
+                        <div class="flex items-center gap-2"><i class="fab fa-css3-alt text-sky-400"></i><span>Tailwind
+                                CSS</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fas fa-forward text-gray-300"></i><span>Next.js</span></div>
+                    </div>
                 </div>
 
+                <!-- Stack -->
                 <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
                     data-aos="fade-up">
                     <h3 class="text-xl font-semibold text-pink-400 mb-4">Technologies / Stack</h3>
-                    <ul class="space-y-3 text-gray-300 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="layers" class="text-yellow-400"></i> MERN
-                            Stack</li>
-                        <li class="flex items-center gap-2"><i data-lucide="database" class="text-green-400"></i>
-                            MongoDB</li>
-                        <li class="flex items-center gap-2"><i data-lucide="server" class="text-orange-400"></i>
-                            Express.js</li>
-                        <li class="flex items-center gap-2"><i data-lucide="atom" class="text-cyan-400"></i> React.js
-                        </li>
-                        <li class="flex items-center gap-2"><i data-lucide="cpu" class="text-indigo-400"></i> Node.js
-                        </li>
-                    </ul>
+                    <div class="space-y-3 text-gray-300 text-sm">
+                        <div class="flex items-center gap-2"><i
+                                class="fas fa-layer-group text-yellow-400"></i><span>MERN Stack</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fas fa-database text-green-400"></i><span>MongoDB</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fab fa-node-js text-orange-400"></i><span>Express.js</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fab fa-react text-cyan-400"></i><span>React.js</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fab fa-node text-indigo-400"></i><span>Node.js</span></div>
+                    </div>
                 </div>
 
+                <!-- Tools -->
                 <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
                     data-aos="fade-up">
                     <h3 class="text-xl font-semibold text-cyan-400 mb-4">Developer Tools</h3>
-                    <ul class="space-y-3 text-gray-300 text-sm">
-                        <li class="flex items-center gap-2"><i data-lucide="git-branch" class="text-rose-400"></i> Git /
-                            GitHub</li>
-                        <li class="flex items-center gap-2"><i data-lucide="terminal" class="text-gray-400"></i> VS Code
-                        </li>
-                    </ul>
+                    <div class="space-y-3 text-gray-300 text-sm">
+                        <div class="flex items-center gap-2"><i class="fab fa-github text-white"></i><span>Git /
+                                GitHub</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-terminal text-gray-400"></i><span>VS
+                                Code</span></div>
+                        <div class="flex items-center gap-2"><i class="fas fa-bug text-red-400"></i><span>Chrome
+                                DevTools</span></div>
+                        <div class="flex items-center gap-2"><i
+                                class="fas fa-check-circle text-green-300"></i><span>Postman</span></div>
+                    </div>
                 </div>
 
             </div>
@@ -420,7 +449,7 @@
                     <br>
                     <div class="flex justify-between">
                         <p class="text-sm text-gray-400">Coursera – 2024</p>
-                        <a href="https://gaming-arcade-sigma.vercel.app/"
+                        <a href="https://www.coursera.org/account/accomplishments/verify/KKSDDB6ZGU9C"
                             class="text-sm text-yellow-100 hover:text-yellow-300 ">🔗 Link</a>
                     </div>
                 </div>
@@ -434,7 +463,7 @@
                     <br>
                     <div class="flex justify-between">
                         <p class="text-sm text-gray-400">Coursera – 2024</p>
-                        <a href="https://gaming-arcade-sigma.vercel.app/"
+                        <a href="https://www.coursera.org/account/accomplishments/verify/ZF4F39QFK5AH"
                             class="text-sm text-purple-100 hover:text-purple-300 ">🔗 Link</a>
                     </div>
                 </div>
@@ -448,7 +477,7 @@
                     <br>
                     <div class="flex justify-between">
                         <p class="text-sm text-gray-400">Coursera – 2024</p>
-                        <a href="https://gaming-arcade-sigma.vercel.app/"
+                        <a href="#"
                             class="text-sm text-orange-100 hover:text-orange-300 ">🔗 Link</a>
                     </div>
                 </div>
