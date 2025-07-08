@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Sidebar Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-gray-900 to bg-gray-100 nav shadow-md fixed w-full z-50">
+        <div class="max-w-6xl mx-auto  px-5 py-3 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-gray-100 px-5 md:px-10">HS</h1>
+            <!-- Hamburger Icon -->
+            <button id="sidebar-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-7 h-7 text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <div class="hidden md:flex space-x-6 text-gray-100 px-5 md:px-10">
+                <a href="#home" class="nav-link hover:font-bold">Home</a>
+                <a href="#about" class="nav-link hover:font-bold">About</a>
+                <a href="#projects" class="nav-link hover:font-bold">Projects</a>
+                <a href="#skills" class="nav-link hover:font-bold">Skills</a>
+                <a href="#certificates" class="nav-link hover:font-bold">Certificates</a>
+                <a href="#contact" class="nav-link hover:font-bold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="sidebar"
+        class="fixed top-0 left-0 h-full w-64 bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+        <div class="p-4 flex justify-between items-center border-b">
+            <h2 class="text-xl font-semibold text-gray-100">Menu</h2>
+            <button id="sidebar-close" class="text-gray-100">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <nav class="flex flex-col p-4 space-y-4 text-gray-100">
+            <a href="#home" class="nav-link hover:font-bold">Home</a>
+            <a href="#about" class="nav-link hover:font-bold">About</a>
+            <a href="#projects" class="nav-link hover:font-bold">Projects</a>
+            <a href="#skills" class="nav-link hover:font-bold">Skills</a>
+            <a href="#certificates" class="nav-link hover:font-bold">Certificates</a>
+            <a href="#contact" class="nav-link hover:font-bold">Contact</a>
+        </nav>
+    </div>
+
+    <section id="home" class="pt-20 min-h-screen bg-gray-950 text-white flex items-center justify-center px-6">
+        <div class="max-w-6xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+
+            <div class="w-full md:w-1/2 text-center md:text-left px-5 md:px-10">
+                <h1 class="text-4xl sm:text-5xl font-bold mb-4">
+                    Hi, I'm <span class="text-blue-500">Harsh</span>
+                </h1>
+                <h2 class="text-xl sm:text-2xl text-gray-300 mb-4">
+                    Frontend Developer & JavaScript Enthusiast
+                </h2>
+                <p class="text-gray-400 mb-6">
+                    I craft fast, responsive, and user-friendly web experiences. Passionate about clean UI and
+                    interactive design.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#projects"
+                        class="bg-blue-600 px-6 py-3 rounded-full text-white hover:bg-blue-900 transition">
+                        View Projects
+                    </a>
+                    <a href="#contact"
+                        class="border border-blue-600 px-6 py-3 rounded-full text-blue-400 hover:bg-blue-600 hover:text-white transition">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-80 h-80 relative mx-auto md:ml-auto md:mr-5">
+                <div class="animated-neon-border w-full h-full rounded-full flex items-center justify-center">
+                    <img src="https://via.placeholder.com/250" alt="Avatar"
+                        class="rounded-full object-cover w-72 h-72" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="py-16 px-5 bg-gray-950 text-white">
+        <div class="max-w-6xl mx-auto">
+
+            <h1 class=" text-5xl font-bold text-center mb-16 text-blue-500">
+                About Me
+            </h1>
+
+            <div class="flex flex-col md:flex-row items-center gap-20 mx-10" data-aos="fade-up">
+
+                <div class="w-full md:w-1/4 mt-[-40px]">
+                    <!-- Avatar Image -->
+                    <img src="./images/about.jpg" alt="About Me"
+                        class="rounded-lg shadow-lg w-full h-auto border-4  mb-4" />
+
+                    <!-- Download Resume Button -->
+                    <a href="/resume.pdf" download
+                        class="inline-block bg-blue-600 text-white px-5 py-2 rounded-full shadow-md hover:bg-blue-900 transition duration-300">
+                        📄 Resume
+                    </a>
+                </div>
+
+                <div class="w-full md:w-3/4">
+                    <p class="text-0.5xl leading-relaxed text-gray-300 mb-5 mt-[-40px]">
+                        Hey! I’m a frontend developer from IIIT Bhopal with a strong passion for building pixel-perfect,
+                        high-performance web experiences. <br>I turn ideas into clean, responsive interfaces using HTML,
+                        CSS, JavaScript, and React. I’m always learning, always building — and yes, I have a soft spot
+                        for dark mode and smooth animations.
+                    </p>
+
+                    <div class="bg-gray-900 rounded-xl shadow-md p-4 border-l-4 border-blue-500 mb-6"
+                        data-aos="fade-right">
+                        <h3 class="text-xl font-semibold text-blue-400 mb-1">B.tech in ECE
+                        </h3>
+                        <p class="text-sm text-gray-200 mb-1">Indian Institute of Information Technology Bhopal</p>
+                        <p class="text-sm text-gray-400">2023 – 2027</p>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold mb-4 mt-0 text-white" data-aos="fade-left">Achievements 🏆</h3>
+
+                    <div class="space-y-4">
+                        <div class="bg-gray-900 shadow rounded-lg p-3 border-l-4 border-green-500" data-aos="fade-up">
+                            <h4 class="font-semibold text-green-400">Smart India Hacathon ' 2023</h4>
+                            <li class="text-sm text-gray-200">My team got selected among the <b>top 5 finalists</b>
+                                nationwide in the Smart India Hackathon 2023 for developing a solution to analyze school
+                                dropouts.</li>
+                            <li class="text-sm text-gray-200">Also we secured 5th position across the entire college in
+                                the Internal Smart India Hackathon 2023</li>
+                        </div>
+
+                        <div class="bg-gray-900 shadow rounded-lg p-3 border-l-4 border-yellow-500" data-aos="fade-up"
+                            data-aos-delay="100">
+                            <h4 class="font-semibold text-yellow-400">Tech Quiz competition (IEEE Club)</h4>
+                            <li class="text-sm text-gray-200">Secured 3rd position in a Tech Quiz competition organized
+                                by the IEEE Club of the college which include various questions related with coding, AI,
+                                Machine Learning etc.</li>
+                        </div>
+
+                        <!-- <div class="bg-gray-900 shadow rounded-lg p-3 border-l-4 border-pink-500" data-aos="fade-up"
+                            data-aos-delay="200">
+                            <h4 class="font-semibold text-pink-400">UI/UX Design Essentials</h4>
+                            <p class="text-sm text-gray-400"></p>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="py-5 px-5 relative overflow-hidden bg-gray-950 text-white">
+        <h2 class="text-5xl py-10 font-bold text-center mb-5 text-blue-500">
+            Projects
+        </h2>
+
+        <div class="relative max-w-6xl mx-auto flex flex-col items-center gap-20 timeline">
+
+            <div class="relative w-full md:w-3/4" data-aos="fade-up">
+                <div
+                    class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(59,130,246,0.7)] z-10">
+                </div>
+                <div class="hover-card border-l-4 border-blue-500 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
+                    <img src="https://via.placeholder.com/300x150" class="rounded mb-3 w-full h-32 object-cover" />
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-blue-400 font-semibold text-lg">Portfolio</h3>
+                        <a href="#" class="text-sm text-blue-300 hover:text-blue-500 hover:underline">Live Demo</a>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-2">Responsive portfolio with animation and dark mode. .</p>
+                    <p class="text-xs text-gray-400">HTML, TailwindCSS, JavaScript</p>
+                </div>
+            </div>
+
+            <div class="relative w-full md:w-3/4" data-aos="fade-up">
+                <div
+                    class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(34,197,94,0.7)] z-10">
+                </div>
+                <div class="hover-card border-l-4 border-green-500 p-6 mt-6 mr-auto rounded-xl max-w-[400px]">
+                    <img src="https://via.placeholder.com/300x150" class="rounded mb-3 w-full h-32 object-cover" />
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-green-400 font-semibold text-lg">Todo App</h3>
+                        <a href="#" class="text-sm text-green-300 hover:text-green-500 hover:underline">Live Demo</a>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-2">Add, edit, delete, and filter tasks with local storage.</p>
+                    <p class="text-xs text-gray-400">React, TailwindCSS</p>
+                </div>
+            </div>
+
+            <div class="relative w-full md:w-3/4" data-aos="fade-up">
+                <div
+                    class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-yellow-400 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(234,179,8,0.7)] z-10">
+                </div>
+                <div class="hover-card border-l-4 border-yellow-400 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
+                    <img src="https://via.placeholder.com/300x150" class="rounded mb-3 w-full h-32 object-cover" />
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-yellow-400 font-semibold text-lg">Quiz App</h3>
+                        <a href="#" class="text-sm text-yellow-300 hover:text-yellow-500 hover:underline">Live Demo</a>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-2">Multiple choice quiz with scoring and results.</p>
+                    <p class="text-xs text-gray-400">JavaScript, HTML, CSS</p>
+                </div>
+            </div>
+
+            <div class="relative w-full md:w-3/4" data-aos="fade-up">
+                <div
+                    class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-pink-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(236,72,153,0.7)] z-10">
+                </div>
+                <div class="hover-card border-l-4 border-pink-500 p-6 mt-6 mr-auto rounded-xl max-w-[400px]">
+                    <img src="https://via.placeholder.com/300x150" class="rounded mb-3 w-full h-32 object-cover" />
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-pink-400 font-semibold text-lg">Weather App</h3>
+                        <a href="#" class="text-sm text-pink-300 hover:text-pink-500 hover:underline">Live Demo</a>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-2">Live weather updates with OpenWeather API.</p>
+                    <p class="text-xs text-gray-400">JS, Tailwind, API</p>
+                </div>
+            </div>
+
+            <!-- Last glowing dot with centered text -->
+            <div class="bg-gray-950 relative w-full md:w-3/4 h-20 flex flex-col items-center justify-start"
+                data-aos="fade-up">
+                <!-- Glowing dot on the timeline -->
+                <div
+                    class="absolute top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-cyan-400 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(34,211,238,0.7)] z-10">
+                </div>
+
+                <!-- Text centered on the line -->
+                <p class="text-xl text-white mt-10 text-center">
+                    🚀 More projects coming soon...
+                </p>
+            </div>
+    </section>
+
+
+    <section id="skills" class="py-10 px-6 bg-gray-950 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold text-center py-8 mb-8 text-blue-500" data-aos="fade-up">
+                Skills
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+
+                <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
+                    data-aos="fade-up">
+                    <h3 class="text-xl font-semibold text-blue-400 mb-4">Languages</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="code" class="text-red-500"></i> C / C++</li>
+                        <li class="flex items-center gap-2"><i data-lucide="file-code" class="text-orange-500"></i> HTML
+                        </li>
+                        <li class="flex items-center gap-2"><i data-lucide="brush" class="text-blue-500"></i> CSS</li>
+                        <li class="flex items-center gap-2"><i data-lucide="code-2" class="text-yellow-400"></i>
+                            JavaScript</li>
+                        <li class="flex items-center gap-2"><i data-lucide="database" class="text-green-500"></i> SQL
+                        </li>
+                        <li class="flex items-center gap-2"><i data-lucide="function-square"
+                                class="text-purple-500"></i> MATLAB</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
+                    data-aos="fade-up">
+                    <h3 class="text-xl font-semibold text-green-400 mb-4">Libraries & Frameworks</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="atom" class="text-cyan-400"></i> React.js
+                        </li>
+                        <li class="flex items-center gap-2"><i data-lucide="box" class="text-pink-500"></i> Bootstrap
+                        </li>
+                        <li class="flex items-center gap-2"><i data-lucide="wind" class="text-sky-400"></i> Tailwind CSS
+                        </li>
+                        <li class="flex items-center gap-2"><i data-lucide="forward" class="text-gray-300"></i> Next.js
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
+                    data-aos="fade-up">
+                    <h3 class="text-xl font-semibold text-pink-400 mb-4">Technologies / Stack</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="layers" class="text-yellow-400"></i> MERN
+                            Stack</li>
+                        <li class="flex items-center gap-2"><i data-lucide="database" class="text-green-400"></i>
+                            MongoDB</li>
+                        <li class="flex items-center gap-2"><i data-lucide="server" class="text-orange-400"></i>
+                            Express.js</li>
+                        <li class="flex items-center gap-2"><i data-lucide="atom" class="text-cyan-400"></i> React.js
+                        </li>
+                        <li class="flex items-center gap-2"><i data-lucide="cpu" class="text-indigo-400"></i> Node.js
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
+                    data-aos="fade-up">
+                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">Developer Tools</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="git-branch" class="text-rose-400"></i> Git /
+                            GitHub</li>
+                        <li class="flex items-center gap-2"><i data-lucide="terminal" class="text-gray-400"></i> VS Code
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="certificates" class="bg-gray-950 text-white py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl font-bold text-center my-12 text-blue-500" data-aos="fade-up">
+                Certificates
+            </h2>
+
+            <div class="space-y-4 px-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left ">
+                <div class="bg-gray-900 shadow rounded-lg p-4 border-l-4 border-yellow-500" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <h4 class="font-semibold text-yellow-400">JavaScript Algorithms and Data Structures</h4>
+                    <p class="text-sm text-gray-400">freeCodeCamp – 2023</p>
+                </div>
+
+                <div class="bg-gray-900 shadow rounded-lg p-4 border-l-4 border-yellow-500" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <h4 class="font-semibold text-yellow-400">JavaScript Algorithms and Data Structures</h4>
+                    <p class="text-sm text-gray-400">freeCodeCamp – 2023</p>
+                </div>
+
+                <div class="bg-gray-900 shadow rounded-lg p-4 border-l-4 border-pink-500" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <h4 class="font-semibold text-pink-400">UI/UX Design Essentials</h4>
+                    <p class="text-sm text-gray-400">Udemy – 2022</p>
+                </div>
+
+                <div class="bg-gray-900 shadow rounded-lg p-4 border-l-4 border-pink-500" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <h4 class="font-semibold text-pink-400">UI/UX Design Essentials</h4>
+                    <p class="text-sm text-gray-400">Udemy – 2022</p>
+                </div>
+            </div>
+    </section>
+
+    <section id="contact" class="bg-gray-950 text-white py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-5xl font-bold text-center mb-12 text-blue-500">
+                Let's Connect
+            </h2>
+
+            <div class="flex flex-col md:flex-row justify-between gap-12" data-aos="fade-up">
+                <div class="md:w-1/2 space-y-6">
+                    <p class="text-lg text-gray-300">
+                        Whether you want to collaborate, ask a question, or just say hi — I'm happy to chat.
+                    </p>
+
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-blue-400"></i>
+                            <a href="mailto:youremail@example.com"
+                                class="text-gray-300 hover:text-blue-400 transition">harsh16022005@gmail.com</a>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone text-green-400"></i>
+                            <span class="text-gray-300">+91 84889 16478</span>
+                        </div>
+
+                    </div>
+                    <br><br>
+                    <div class="flex gap-6 pt-4 text-2xl">
+                        <a href="https://www.linkedin.com/in/harsh-gupta-5587b528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" class="text-blue-500 hover:text-blue-300 transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/harsh_gupta16_?utm_source=qr&igsh=NmpnZmVzN3FxZDE0"
+                            target="_blank" class="text-pink-500 hover:text-pink-300 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/yourprofile" target="_blank"
+                            class="text-sky-400 hover:text-sky-200 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://github.com/harshgupta-16" target="_blank"
+                            class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <form class="space-y-5">
+                        <input type="text" placeholder="Your Name" required
+                            class="w-full px-4 py-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                        <input type="email" placeholder="Your Email" required
+                            class="w-full px-4 py-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                        <textarea rows="5" placeholder="Your Message" required
+                            class="w-full px-4 py-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+                        <button type="submit"
+                            class="bg-blue-600 hover:bg-blue-900 transition px-6 py-3 rounded-lg text-white font-semibold">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <footer class="bg-gray-900 text-gray-300 pt-10 pb-5 px-6 relative">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row flex-wrap justify-between gap-10">
+
+            <div class="w-full md:w-1/6">
+                <h2 class="text-2xl font-bold text-white mb-3">Harsh Gupta</h2>
+                <p class="text-gray-400">Building beautiful, responsive web experiences.</p>
+            </div>
+
+            <div class="w-full md:w-1/6">
+                <h3 class="text-xl font-semibold mb-3 text-white">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
+                    <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
+                    <li><a href="#skills" class="hover:text-blue-400 transition">Skills</a></li>
+                    <li><a href="#certificates" class="hover:text-blue-400 transition">Certificates</a></li>
+                    <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="w-full md:w-2/6">
+                <h3 class="text-xl font-semibold text-white mb-3">📍 Location</h3>
+                <p class="text-gray-400 text-sm">Delhi, India</p>
+                <iframe class="w-full rounded-lg mt-2" height="120" style="border:0" loading="lazy" allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83924205422!2d77.0688999!3d28.5272803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3d05b5b7b47%3A0xc2129437c64ebc4e!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1717761400000!5m2!1sen!2sin">
+                </iframe>
+            </div>
+
+            <div class="w-full md:w-1/6">
+                <h3 class="text-xl font-semibold mb-3 text-white">Follow Me</h3>
+                <div class="flex gap-5 text-2xl">
+                    <a href="https://linkedin.com/in/yourprofile"
+                        class="text-blue-500 hover:text-blue-300 transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/yourprofile" class="text-pink-500 hover:text-pink-300 transition"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/yourprofile" class="text-sky-400 hover:text-sky-200 transition"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/yourprofile" class="text-gray-400 hover:text-white transition"><i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-2xl mx-auto mt-12 text-center">
+            <h3 class="text-xl font-semibold text-white mb-4">📬 Subscribe to My Newsletter</h3>
+            <form class="flex flex-col sm:flex-row gap-3 items-center justify-center">
+                <input type="email" placeholder="Enter your email" required
+                    class="w-full sm:w-2/3 px-4 py-3 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="submit"
+                    class="bg-blue-600 px-6 py-3 rounded-lg text-white hover:bg-blue-800 transition">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-5 text-center text-sm text-gray-500">
+            © 2025 Harsh. All rights reserved.
+        </div>
+
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+            class="fixed bottom-5 right-5 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-800 transition z-50">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>

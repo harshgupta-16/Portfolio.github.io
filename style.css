@@ -1,0 +1,115 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.active-link {
+  color: rgb(16, 127, 255); 
+  font-weight: bold;
+}
+
+.nav{
+    border-bottom: 1px solid red;
+    animation: solidBorderCycle 6s linear infinite;
+    box-shadow: none;
+}
+
+@keyframes solidBorderCycle {
+    0% {
+        border-color: #00f;
+    }
+
+    16% {
+        border-color: #0ff;
+    }
+
+    33% {
+        border-color: #0f0;
+    }
+
+    50% {
+        border-color: #ff0;
+    }
+
+    66% {
+        border-color: #f90;
+    }
+
+    83% {
+        border-color: #f0f;
+    }
+
+    100% {
+        border-color: #f00;
+    }
+}
+
+.animated-neon-border {
+    border: 2px solid #00f;
+    border-radius: 9999px;
+    animation: solidNeonCycle 6s linear infinite;
+    box-shadow: 0 0 20px #00f;
+}
+
+/* Rainbow neon loop */
+@keyframes solidNeonCycle {
+    0% {
+        border-color: #00f;
+        box-shadow: 0 0 20px #00f;
+    }
+
+    16% {
+        border-color: #0ff;
+        box-shadow: 0 0 20px #0ff;
+    }
+
+    33% {
+        border-color: #0f0;
+        box-shadow: 0 0 20px #0f0;
+    }
+
+    50% {
+        border-color: #ff0;
+        box-shadow: 0 0 20px #ff0;
+    }
+
+    66% {
+        border-color: #f90;
+        box-shadow: 0 0 20px #f90;
+    }
+
+    83% {
+        border-color: #f0f;
+        box-shadow: 0 0 20px #f0f;
+    }
+
+    100% {
+        border-color: #f00;
+        box-shadow: 0 0 20px #f00;
+    }
+}
+
+/* for Projects */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(#0ff, #0f0, #ff0, #f90, #f0f, #f00);
+    z-index: 0;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+    background-color: #1f2937;
+    /* solid dark gray */
+}
+
+
