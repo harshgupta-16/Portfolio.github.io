@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const iconMobile = document.getElementById('mode-icon-mobile');
 
   // Start in dark mode unless light mode is saved
-  const savedTheme = localStorage.getItem("dark-mode");
+  const savedTheme = localStorage.getItem("theme");
   const isDark = savedTheme !== "light"; // default dark
 
   applyTheme(isDark);

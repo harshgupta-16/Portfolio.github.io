@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 overflow-x-hidden">
 
     <!-- Navbar -->
     <nav class="bg-gray-900 nav shadow-md fixed w-full z-50">
@@ -84,10 +84,10 @@
     </div>
 
     <!-- Home -->
-    <section id="home" class="pt-20 min-h-screen flex items-center justify-center px-6">
-        <div class="max-w-6xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+    <section id="home" class="pb-5 min-h-screen flex items-center justify-center px-6">
+        <div class="max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-center gap-6">
 
-            <div class="w-full md:w-2/3 text-center md:text-left px-5 md:px-10">
+            <div class="w-full md:w-1/2 text-center md:text-left md:px-10">
                 <h1 class="text-4xl sm:text-6xl font-bold mb-4 ">
                     Hi, I'm <span class="text-blue-500">Harsh Gupta</span>
                 </h1>
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="w-80 h-80 relative mx-auto md:ml-auto md:mr-5">
+            <div class="w-80 h-80 relative mx-auto mt-20 md:ml-auto md:mr-5">
                 <div class="animated-neon-border w-full h-full rounded-full flex items-center justify-center">
                     <img src="./images/profile.jpg" style="filter: brightness(0.9);" alt="Avatar"
                         class="rounded-full object-cover w-80 h-80" />
@@ -254,19 +254,19 @@
                     </div>
                     <p class="text-sm text-gray-300 mb-2">Add, edit, delete, and filter tasks with local storage.</p>
                     <div class="flex items-center gap-3 mt-5">
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-1">
                             <i class="fab fa-html5 text-orange-500"></i>
                             <span class="text-sm text-gray-400">HTML</span>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-1">
                             <i class="fab fa-css3-alt text-sky-400"></i>
                             <span class="text-sm text-gray-400">TailwindCSS</span>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-1">
                             <i class="fab fa-js-square text-yellow-400"></i>
                             <span class="text-sm text-gray-400">JavaScript</span>
                         </div>
-                        <div class="flex items-center gap-2">
+                        <div class="flex items-center gap-1">
                             <i class="fab fa-react text-cyan-400"></i>
                             <span class="text-sm text-gray-400">React</span>
                         </div>
@@ -477,8 +477,7 @@
                     <br>
                     <div class="flex justify-between">
                         <p class="text-sm text-gray-400">Coursera – 2024</p>
-                        <a href="#"
-                            class="text-sm text-orange-100 hover:text-orange-300 ">🔗 Link</a>
+                        <a href="#" class="text-sm text-orange-100 hover:text-orange-300 ">🔗 Link</a>
                     </div>
                 </div>
             </div>
@@ -513,7 +512,8 @@
 
                     </div>
                     <br><br>
-                    <div class="flex gap-6 pt-4 text-2xl">
+                    <p class="sm:text-2xl font-semibold">Connect us on:</p>
+                    <div class="flex gap-6 pt-0 text-2xl">
                         <a href="https://www.linkedin.com/in/harsh-gupta-5587b528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                             target="_blank" class="text-blue-500 hover:text-blue-300 transition">
                             <i class="fab fa-linkedin"></i>
@@ -534,22 +534,26 @@
                 </div>
 
                 <div class="md:w-1/2">
-                    <form class="space-y-5">
+                    <form
+                        class="space-y-5 backdrop-blur-md dark:border-0 dark:bg-white/10 border border-white/40 dark:border-white/20 shadow-lg rounded-xl p-6">
                         <input type="text" placeholder="Your Name" required
-                            class="w-full px-4 py-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            class="w-full border-2 border-blue-600  px-4 py-3 dark:bg-white/10 text-gray-800 dark:text-white placeholder-gray-600 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
 
                         <input type="email" placeholder="Your Email" required
-                            class="w-full px-4 py-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            class="w-full border-2 border-blue-600 px-4 py-3 bg-white/20 dark:bg-white/10 text-gray-800 dark:text-white placeholder-gray-600 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
 
                         <textarea rows="5" placeholder="Your Message" required
-                            class="w-full px-4 py-3 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            class="w-full border-2 border-blue-600 px-4 py-3 bg-white/20 dark:bg-white/10 text-gray-800 dark:text-white placeholder-gray-600 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
 
                         <button type="submit"
-                            class="bg-blue-600 hover:bg-blue-900 transition px-6 py-3 rounded-lg text-white font-semibold">
+                            class="bg-blue-600 hover:bg-blue-800 transition px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:shadow-xl">
                             Send Message
                         </button>
                     </form>
                 </div>
+
+
+
             </div>
         </div>
     </section>
