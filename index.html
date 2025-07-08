@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Sidebar Navbar</title>
+    <title>Portfolio | Harsh Gupta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Permanent+Marker&family=Protest+Guerrilla&family=Roboto+Slab:wght@700&family=Rubik+Mono+One&family=Rubik:ital,wght@0,503;1,503&family=Unlock&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -19,7 +24,7 @@
     <!-- Navbar -->
     <nav class="bg-gray-900 to bg-gray-100 nav shadow-md fixed w-full z-50">
         <div class="max-w-6xl mx-auto  px-5 py-3 flex justify-between items-center">
-            <h1 class="text-xl font-bold text-gray-100 px-5 md:px-10">HS</h1>
+            <h1 class="text-xl font-bold text-gray-100 px-5 md:px-10">HG</h1>
             <!-- Hamburger Icon -->
             <button id="sidebar-toggle" class="md:hidden focus:outline-none">
                 <svg class="w-7 h-7 text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,11 +63,12 @@
         </nav>
     </div>
 
+    <!-- Home -->
     <section id="home" class="pt-20 min-h-screen bg-gray-950 text-white flex items-center justify-center px-6">
         <div class="max-w-6xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
             <div class="w-full md:w-1/2 text-center md:text-left px-5 md:px-10">
-                <h1 class="text-4xl sm:text-5xl font-bold mb-4">
+                <h1 class="text-4xl sm:text-6xl font-bold mb-4 ">
                     Hi, I'm <span class="text-blue-500">Harsh</span>
                 </h1>
                 <h2 class="text-xl sm:text-2xl text-gray-300 mb-4">
@@ -86,14 +92,14 @@
 
             <div class="w-80 h-80 relative mx-auto md:ml-auto md:mr-5">
                 <div class="animated-neon-border w-full h-full rounded-full flex items-center justify-center">
-                    <img src="https://via.placeholder.com/250" alt="Avatar"
-                        class="rounded-full object-cover w-72 h-72" />
+                    <img src="./images/profile.jpg" style="filter: brightness(0.8);" alt="Avatar"
+                        class="rounded-full object-cover w-80 h-80" />
                 </div>
             </div>
         </div>
     </section>
 
-
+    <!-- About -->
     <section id="about" class="py-16 px-5 bg-gray-950 text-white">
         <div class="max-w-6xl mx-auto">
 
@@ -105,13 +111,13 @@
 
                 <div class="w-full md:w-1/4 mt-[-40px]">
                     <!-- Avatar Image -->
-                    <img src="./images/about.jpg" alt="About Me"
-                        class="rounded-lg shadow-lg w-full h-auto border-4  mb-4" />
+                    <img src="./images/about.jpg" style="filter: brightness(0.8);" alt="About Me"
+                        class="rounded-lg shadow-lg w-full h-auto border-0  mb-4" />
 
                     <!-- Download Resume Button -->
                     <a href="/resume.pdf" download
                         class="inline-block bg-blue-600 text-white px-5 py-2 rounded-full shadow-md hover:bg-blue-900 transition duration-300">
-                        📄 Resume
+                        📝 Resume⬇️
                     </a>
                 </div>
 
@@ -123,11 +129,11 @@
                         for dark mode and smooth animations.
                     </p>
 
-                    <div class="bg-gray-900 rounded-xl shadow-md p-4 border-l-4 border-blue-500 mb-6"
+                    <div class="bg-gray-900 rounded-xl shadow-md p-4 border-l-4 border-pink-500 mb-6"
                         data-aos="fade-right">
-                        <h3 class="text-xl font-semibold text-blue-400 mb-1">B.tech in ECE
+                        <h3 class="text-xl font-semibold text-pink-400 mb-1">B.tech in ECE
                         </h3>
-                        <p class="text-sm text-gray-200 mb-1">Indian Institute of Information Technology Bhopal</p>
+                        <p class="text-2sm text-gray-200 mb-1">Indian Institute of Information Technology Bhopal</p>
                         <p class="text-sm text-gray-400">2023 – 2027</p>
                     </div>
 
@@ -135,19 +141,17 @@
 
                     <div class="space-y-4">
                         <div class="bg-gray-900 shadow rounded-lg p-3 border-l-4 border-green-500" data-aos="fade-up">
-                            <h4 class="font-semibold text-green-400">Smart India Hacathon ' 2023</h4>
-                            <li class="text-sm text-gray-200">My team got selected among the <b>top 5 finalists</b>
+                            <h4 class="font-semibold text-green-400">💡 Smart India Hacathon ' 2023</h4>
+                            <li class="text-2sm text-gray-200">My team got selected among the <b>top 5 finalists</b>
                                 nationwide in the Smart India Hackathon 2023 for developing a solution to analyze school
                                 dropouts.</li>
-                            <li class="text-sm text-gray-200">Also we secured 5th position across the entire college in
-                                the Internal Smart India Hackathon 2023</li>
                         </div>
 
                         <div class="bg-gray-900 shadow rounded-lg p-3 border-l-4 border-yellow-500" data-aos="fade-up"
                             data-aos-delay="100">
-                            <h4 class="font-semibold text-yellow-400">Tech Quiz competition (IEEE Club)</h4>
-                            <li class="text-sm text-gray-200">Secured 3rd position in a Tech Quiz competition organized
-                                by the IEEE Club of the college which include various questions related with coding, AI,
+                            <h4 class="font-semibold text-yellow-400">🤖 Tech Quiz competition (IEEE Club)</h4>
+                            <li class="text-2sm text-gray-200">Secured 3rd position in a Tech Quiz competition organized
+                                by the IEEE Club which include various questions related with coding, AI,
                                 Machine Learning etc.</li>
                         </div>
 
@@ -163,7 +167,7 @@
         </div>
     </section>
 
-
+    <!-- Project -->
     <section id="projects" class="py-5 px-5 relative overflow-hidden bg-gray-950 text-white">
         <h2 class="text-5xl py-10 font-bold text-center mb-5 text-blue-500">
             Projects
@@ -173,16 +177,33 @@
 
             <div class="relative w-full md:w-3/4" data-aos="fade-up">
                 <div
-                    class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(59,130,246,0.7)] z-10">
+                    class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(225,0,0,0.7)] z-10">
                 </div>
-                <div class="hover-card border-l-4 border-blue-500 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
-                    <img src="https://via.placeholder.com/300x150" class="rounded mb-3 w-full h-32 object-cover" />
+                <div class="hover-card border-l-4 border-red-500 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
+                    <img src="./images/gamingarcade.png" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-blue-400 font-semibold text-lg">Portfolio</h3>
-                        <a href="#" class="text-sm text-blue-300 hover:text-blue-500 hover:underline">Live Demo</a>
+                        <h3 class="text-red-400 font-semibold text-lg">Gaming Arcade</h3>
+                        <a href="https://gaming-arcade-sigma.vercel.app/"
+                            class="text-sm text-red-300 hover:text-red-500 hover:underline">🌐 Live Demo</a>
                     </div>
-                    <p class="text-sm text-gray-300 mb-2">Responsive portfolio with animation and dark mode. .</p>
-                    <p class="text-xs text-gray-400">HTML, TailwindCSS, JavaScript</p>
+                    <p class="text-sm text-gray-300 mb-2">Built a responsive gaming arcade with 4 interactive web
+                        games<i> (Tic-Tac-Toe, Block Breaker, Memory Card Game, and Candy Crush clone)</i></p>
+                    <p class="text-sm text-gray-300 mb-2">Modular JavaScript optimized gameplay, achieving &#60 2.5s
+                        loads and 30% less redundant code.</p>
+                    <div class="flex items-center gap-3 mt-5">
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-html5 text-orange-500"></i>
+                            <span class="text-sm text-gray-400">HTML</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-css3-alt text-sky-400"></i>
+                            <span class="text-sm text-gray-400">TailwindCSS</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-js-square text-yellow-400"></i>
+                            <span class="text-sm text-gray-400">JavaScript</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -191,28 +212,61 @@
                     class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(34,197,94,0.7)] z-10">
                 </div>
                 <div class="hover-card border-l-4 border-green-500 p-6 mt-6 mr-auto rounded-xl max-w-[400px]">
-                    <img src="https://via.placeholder.com/300x150" class="rounded mb-3 w-full h-32 object-cover" />
+                    <img src="./images/todo.png" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
                         <h3 class="text-green-400 font-semibold text-lg">Todo App</h3>
-                        <a href="#" class="text-sm text-green-300 hover:text-green-500 hover:underline">Live Demo</a>
+                        <a href="https://todo-alpha-henna-32.vercel.app/"
+                            class="text-sm text-green-300 hover:text-green-500 hover:underline">🌐 Live Demo</a>
                     </div>
                     <p class="text-sm text-gray-300 mb-2">Add, edit, delete, and filter tasks with local storage.</p>
-                    <p class="text-xs text-gray-400">React, TailwindCSS</p>
+                    <div class="flex items-center gap-3 mt-5">
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-html5 text-orange-500"></i>
+                            <span class="text-sm text-gray-400">HTML</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-css3-alt text-sky-400"></i>
+                            <span class="text-sm text-gray-400">TailwindCSS</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-js-square text-yellow-400"></i>
+                            <span class="text-sm text-gray-400">JavaScript</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-react text-cyan-400"></i>
+                            <span class="text-sm text-gray-400">React</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="relative w-full md:w-3/4" data-aos="fade-up">
                 <div
-                    class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-yellow-400 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(234,179,8,0.7)] z-10">
+                    class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-yellow-400 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(225,225,0,0.7)] z-10">
                 </div>
                 <div class="hover-card border-l-4 border-yellow-400 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
-                    <img src="https://via.placeholder.com/300x150" class="rounded mb-3 w-full h-32 object-cover" />
+                    <img src="./images/portfolio.png" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-yellow-400 font-semibold text-lg">Quiz App</h3>
-                        <a href="#" class="text-sm text-yellow-300 hover:text-yellow-500 hover:underline">Live Demo</a>
+                        <h3 class="text-yellow-400 font-semibold text-lg">Portfolio</h3>
+                        <a href="https://portfolio-github-io-two-xi.vercel.app/"
+                            class="text-sm text-yellow-300 hover:text-yellow-500 hover:underline">🌐 Live Demo</a>
                     </div>
-                    <p class="text-sm text-gray-300 mb-2">Multiple choice quiz with scoring and results.</p>
-                    <p class="text-xs text-gray-400">JavaScript, HTML, CSS</p>
+                    <p class="text-sm text-gray-300 mb-2">Built a personal portfolio to showcase projects, skills, and
+                        achievements with responsive design and smooth animations.</p>
+                    <div class="flex items-center gap-3 mt-5">
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-html5 text-orange-500"></i>
+                            <span class="text-sm text-gray-400">HTML</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-css3-alt text-sky-400"></i>
+                            <span class="text-sm text-gray-400">TailwindCSS</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-js-square text-yellow-400"></i>
+                            <span class="text-sm text-gray-400">JavaScript</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -224,29 +278,39 @@
                     <img src="https://via.placeholder.com/300x150" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
                         <h3 class="text-pink-400 font-semibold text-lg">Weather App</h3>
-                        <a href="#" class="text-sm text-pink-300 hover:text-pink-500 hover:underline">Live Demo</a>
+                        <a href="#" class="text-sm text-pink-300 hover:text-pink-500 hover:underline">🌐 Live Demo</a>
                     </div>
                     <p class="text-sm text-gray-300 mb-2">Live weather updates with OpenWeather API.</p>
-                    <p class="text-xs text-gray-400">JS, Tailwind, API</p>
+                    <div class="flex items-center gap-3 mt-5">
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-js-square text-yellow-400"></i>
+                            <span class="text-sm text-gray-400">JavaScript</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fab fa-css3-alt text-sky-400"></i>
+                            <span class="text-sm text-gray-400">TailwindCSS</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-cloud text-blue-300"></i>
+                            <span class="text-sm text-gray-400">API</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Last glowing dot with centered text -->
+            <!-- Glowing Dot: End of Timeline -->
             <div class="bg-gray-950 relative w-full md:w-3/4 h-20 flex flex-col items-center justify-start"
                 data-aos="fade-up">
-                <!-- Glowing dot on the timeline -->
                 <div
                     class="absolute top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-cyan-400 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(34,211,238,0.7)] z-10">
                 </div>
-
-                <!-- Text centered on the line -->
                 <p class="text-xl text-white mt-10 text-center">
                     🚀 More projects coming soon...
                 </p>
             </div>
     </section>
 
-
+    <!-- Skills -->
     <section id="skills" class="py-10 px-6 bg-gray-950 text-white">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-5xl font-bold text-center py-8 mb-8 text-blue-500" data-aos="fade-up">
@@ -319,40 +383,61 @@
         </div>
     </section>
 
-
-    <section id="certificates" class="bg-gray-950 text-white py-20 px-6">
+    <!-- Certificates -->
+    <section id="certificates" class="bg-gray-950 text-white py-10 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-5xl font-bold text-center my-12 text-blue-500" data-aos="fade-up">
                 Certificates
             </h2>
+            <div class="flex flex-wrap gap-8 justify-center">
 
-            <div class="space-y-4 px-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left ">
-                <div class="bg-gray-900 shadow rounded-lg p-4 border-l-4 border-yellow-500" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <h4 class="font-semibold text-yellow-400">JavaScript Algorithms and Data Structures</h4>
-                    <p class="text-sm text-gray-400">freeCodeCamp – 2023</p>
+                <div class="bg-gray-900 max-w-[400px] shadow rounded-lg p-5 border-l-4 border-yellow-500"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="font-semibold text-yellow-400">Meta Front-End Development</h4>
+                    <br>
+                    <p class="text-2sm text-gray-300 mb-2">Gained hands-on experience in building responsive web
+                        interfaces using HTML, CSS, and JavaScript.</p>
+                    <br>
+                    <div class="flex justify-between">
+                        <p class="text-sm text-gray-400">Coursera – 2024</p>
+                        <a href="https://gaming-arcade-sigma.vercel.app/"
+                            class="text-sm text-yellow-100 hover:text-yellow-300 ">🔗 Link</a>
+                    </div>
                 </div>
 
-                <div class="bg-gray-900 shadow rounded-lg p-4 border-l-4 border-yellow-500" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <h4 class="font-semibold text-yellow-400">JavaScript Algorithms and Data Structures</h4>
-                    <p class="text-sm text-gray-400">freeCodeCamp – 2023</p>
+                <div class="bg-gray-900 max-w-[400px] shadow rounded-lg p-5 border-l-4 border-purple-500"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="font-semibold text-purple-400">HTML and CSS in Depth</h4>
+                    <br>
+                    <p class="text-2sm text-gray-300 mb-2">Developed strong skills in semantic HTML, advanced CSS
+                        styling, and responsive design.</p>
+                    <br>
+                    <div class="flex justify-between">
+                        <p class="text-sm text-gray-400">Coursera – 2024</p>
+                        <a href="https://gaming-arcade-sigma.vercel.app/"
+                            class="text-sm text-purple-100 hover:text-purple-300 ">🔗 Link</a>
+                    </div>
                 </div>
 
-                <div class="bg-gray-900 shadow rounded-lg p-4 border-l-4 border-pink-500" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <h4 class="font-semibold text-pink-400">UI/UX Design Essentials</h4>
-                    <p class="text-sm text-gray-400">Udemy – 2022</p>
-                </div>
-
-                <div class="bg-gray-900 shadow rounded-lg p-4 border-l-4 border-pink-500" data-aos="fade-up"
-                    data-aos-delay="200">
-                    <h4 class="font-semibold text-pink-400">UI/UX Design Essentials</h4>
-                    <p class="text-sm text-gray-400">Udemy – 2022</p>
+                <div class="bg-gray-900 max-w-[400px] shadow rounded-lg p-5 border-l-4 border-orange-500"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="font-semibold text-orange-400">Meta Front-End Development</h4>
+                    <br>
+                    <p class="text-2sm text-gray-300 mb-2">Gained hands-on experience in building responsive web
+                        interfaces using HTML, CSS, and JavaScript.</p>
+                    <br>
+                    <div class="flex justify-between">
+                        <p class="text-sm text-gray-400">Coursera – 2024</p>
+                        <a href="https://gaming-arcade-sigma.vercel.app/"
+                            class="text-sm text-orange-100 hover:text-orange-300 ">🔗 Link</a>
+                    </div>
                 </div>
             </div>
+        </div>
+        </div>
     </section>
 
+    <!-- Connect -->
     <section id="contact" class="bg-gray-950 text-white py-20 px-6">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-5xl font-bold text-center mb-12 text-blue-500">
@@ -421,6 +506,8 @@
     </section>
 
     <hr>
+
+    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 pt-10 pb-5 px-6 relative">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row flex-wrap justify-between gap-10">
 
@@ -443,23 +530,24 @@
 
             <div class="w-full md:w-2/6">
                 <h3 class="text-xl font-semibold text-white mb-3">📍 Location</h3>
-                <p class="text-gray-400 text-sm">Delhi, India</p>
+                <p class="text-gray-400 text-sm">Bhopal, India</p>
                 <iframe class="w-full rounded-lg mt-2" height="120" style="border:0" loading="lazy" allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83924205422!2d77.0688999!3d28.5272803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3d05b5b7b47%3A0xc2129437c64ebc4e!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1717761400000!5m2!1sen!2sin">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.738181844256!2d77.41261517473464!3d23.259933313258675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43f2f4cb3c15%3A0x19c088a25b48255c!2sBhopal%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1717769999999!5m2!1sen!2sin">
                 </iframe>
+
             </div>
 
             <div class="w-full md:w-1/6">
                 <h3 class="text-xl font-semibold mb-3 text-white">Follow Me</h3>
                 <div class="flex gap-5 text-2xl">
-                    <a href="https://linkedin.com/in/yourprofile"
+                    <a href="https://www.linkedin.com/in/harsh-gupta-5587b528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                         class="text-blue-500 hover:text-blue-300 transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://instagram.com/yourprofile" class="text-pink-500 hover:text-pink-300 transition"><i
-                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/harsh_gupta16_?utm_source=qr&igsh=NmpnZmVzN3FxZDE0"
+                        class="text-pink-500 hover:text-pink-300 transition"><i class="fab fa-instagram"></i></a>
                     <a href="https://twitter.com/yourprofile" class="text-sky-400 hover:text-sky-200 transition"><i
                             class="fab fa-twitter"></i></a>
-                    <a href="https://github.com/yourprofile" class="text-gray-400 hover:text-white transition"><i
+                    <a href="https://github.com/harshgupta-16" class="text-gray-400 hover:text-white transition"><i
                             class="fab fa-github"></i></a>
                 </div>
             </div>
