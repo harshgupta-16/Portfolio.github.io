@@ -22,7 +22,7 @@
 <body class="bg-gray-100">
 
     <!-- Navbar -->
-    <nav class="bg-gray-900 to bg-gray-100 nav shadow-md fixed w-full z-50">
+    <nav class="bg-gray-900 nav shadow-md fixed w-full z-50">
         <div class="max-w-6xl mx-auto  px-5 py-3 flex justify-between items-center">
             <h1 class="text-xl font-bold text-gray-100 px-5 md:px-10">HG</h1>
             <!-- Hamburger Icon -->
@@ -39,6 +39,16 @@
                 <a href="#skills" class="nav-link hover:font-bold">Skills</a>
                 <a href="#certificates" class="nav-link hover:font-bold">Certificates</a>
                 <a href="#contact" class="nav-link hover:font-bold">Contact</a>
+                <!-- Desktop toggle -->
+                <div class="flex items-center gap-1 ml-4">
+                    <span id="mode-icon-desktop" class="text-white text-lg">🌙</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="theme-toggle-desktop" class="sr-only peer" />
+                        <div
+                            class="w-7 h-4 bg-gray-600 rounded-full peer peer-checked:after:translate-x-full after:absolute after:top-[0px] after:left-[0px] after:bg-white after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-yellow-400">
+                        </div>
+                    </label>
+                </div>
             </div>
         </div>
     </nav>
@@ -60,21 +70,32 @@
             <a href="#skills" class="nav-link hover:font-bold">Skills</a>
             <a href="#certificates" class="nav-link hover:font-bold">Certificates</a>
             <a href="#contact" class="nav-link hover:font-bold">Contact</a>
-        </nav>
+            <!-- Mobile toggle -->
+            <div class="flex items-center gap-1 ml-4">
+                <span id="mode-icon-mobile" class="text-white text-lg">🌙</span>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="theme-toggle-mobile" class="sr-only peer" />
+                    <div
+                        class="w-11 h-6 bg-gray-600 rounded-full peer peer-checked:after:translate-x-full after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-400">
+                    </div>
+                </label>
+            </div>
+    </div>
+    </nav>
     </div>
 
     <!-- Home -->
-    <section id="home" class="pt-20 min-h-screen bg-gray-950 text-white flex items-center justify-center px-6">
+    <section id="home" class="pt-20 min-h-screen flex items-center justify-center px-6">
         <div class="max-w-6xl w-full flex flex-col-reverse md:flex-row items-center justify-between gap-12">
 
             <div class="w-full md:w-1/2 text-center md:text-left px-5 md:px-10">
                 <h1 class="text-4xl sm:text-6xl font-bold mb-4 ">
                     Hi, I'm <span class="text-blue-500">Harsh</span>
                 </h1>
-                <h2 class="text-xl sm:text-2xl text-gray-300 mb-4">
+                <h2 class="text-xl sm:text-2xl  mb-4">
                     Frontend Developer & JavaScript Enthusiast
                 </h2>
-                <p class="text-gray-400 mb-6">
+                <p class="mb-6">
                     I craft fast, responsive, and user-friendly web experiences. Passionate about clean UI and
                     interactive design.
                 </p>
@@ -100,7 +121,7 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="py-16 px-5 bg-gray-950 text-white">
+    <section id="about" class="py-16 px-5">
         <div class="max-w-6xl mx-auto">
 
             <h1 class=" text-5xl font-bold text-center mb-16 text-blue-500">
@@ -122,7 +143,7 @@
                 </div>
 
                 <div class="w-full md:w-3/4">
-                    <p class="text-0.5xl leading-relaxed text-gray-300 mb-5 mt-[-40px]">
+                    <p class="text-0.5xl leading-relaxed mb-5 mt-[-40px]">
                         Hey! I’m a frontend developer from IIIT Bhopal with a strong passion for building pixel-perfect,
                         high-performance web experiences. <br>I turn ideas into clean, responsive interfaces using HTML,
                         CSS, JavaScript, and React. I’m always learning, always building — and yes, I have a soft spot
@@ -137,7 +158,7 @@
                         <p class="text-sm text-gray-400">2023 – 2027</p>
                     </div>
 
-                    <h3 class="text-2xl font-semibold mb-4 mt-0 text-white" data-aos="fade-left">Achievements 🏆</h3>
+                    <h3 class="text-2xl font-semibold mb-4 mt-0" data-aos="fade-left">Achievements 🏆</h3>
 
                     <div class="space-y-4">
                         <div class="bg-gray-900 shadow rounded-lg p-3 border-l-4 border-green-500" data-aos="fade-up">
@@ -168,7 +189,7 @@
     </section>
 
     <!-- Project -->
-    <section id="projects" class="py-5 px-5 relative overflow-hidden bg-gray-950 text-white">
+    <section id="projects" class="py-5 px-5 relative overflow-hidden text-white">
         <h2 class="text-5xl py-10 font-bold text-center mb-5 text-blue-500">
             Projects
         </h2>
@@ -311,7 +332,7 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="py-10 px-6 bg-gray-950 text-white">
+    <section id="skills" class="py-10 px-6 text-white">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-5xl font-bold text-center py-8 mb-8 text-blue-500" data-aos="fade-up">
                 Skills
@@ -384,7 +405,7 @@
     </section>
 
     <!-- Certificates -->
-    <section id="certificates" class="bg-gray-950 text-white py-10 px-6">
+    <section id="certificates" class=" text-white py-10 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-5xl font-bold text-center my-12 text-blue-500" data-aos="fade-up">
                 Certificates
@@ -438,7 +459,7 @@
     </section>
 
     <!-- Connect -->
-    <section id="contact" class="bg-gray-950 text-white py-20 px-6">
+    <section id="contact" class=" py-20 px-6">
         <div class="max-w-5xl mx-auto">
             <h2 class="text-5xl font-bold text-center mb-12 text-blue-500">
                 Let's Connect
@@ -446,7 +467,7 @@
 
             <div class="flex flex-col md:flex-row justify-between gap-12" data-aos="fade-up">
                 <div class="md:w-1/2 space-y-6">
-                    <p class="text-lg text-gray-300">
+                    <p class="text-lg">
                         Whether you want to collaborate, ask a question, or just say hi — I'm happy to chat.
                     </p>
 
@@ -454,12 +475,12 @@
                         <div class="flex items-center gap-3">
                             <i class="fas fa-envelope text-blue-400"></i>
                             <a href="mailto:youremail@example.com"
-                                class="text-gray-300 hover:text-blue-400 transition">harsh16022005@gmail.com</a>
+                                class="hover:text-blue-400 transition">harsh16022005@gmail.com</a>
                         </div>
 
                         <div class="flex items-center gap-3">
                             <i class="fas fa-phone text-green-400"></i>
-                            <span class="text-gray-300">+91 84889 16478</span>
+                            <span>+91 84889 16478</span>
                         </div>
 
                     </div>

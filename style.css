@@ -2,6 +2,23 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Light Theme (default) */
+body.light-mode {
+  background-color: #f3f4f6; /* light gray */
+  color: #0f172a;
+}
+
+/* Dark Theme */
+body.dark-mode {
+  background-color: #030712; /* dark gray/black */
+  color: #fff;
+}
+
+/* Smooth transition */
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
 /* Scrollbar base */
 ::-webkit-scrollbar {
     width: 10px;

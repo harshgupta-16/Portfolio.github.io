@@ -3,25 +3,25 @@ const sidebar = document.getElementById("sidebar");
 const sidebarClose = document.getElementById("sidebar-close");
 
 sidebarToggle.addEventListener("click", () => {
-    sidebar.classList.remove("-translate-x-full");
+  sidebar.classList.remove("-translate-x-full");
 });
 
 sidebarClose.addEventListener("click", () => {
-    sidebar.classList.add("-translate-x-full");
+  sidebar.classList.add("-translate-x-full");
 });
 
-// Optional: Close sidebar when a link is clicked
 document.querySelectorAll("#sidebar a").forEach(link => {
-    link.addEventListener("click", () => {
-        sidebar.classList.add("-translate-x-full");
-    });
+  link.addEventListener("click", () => {
+    sidebar.classList.add("-translate-x-full");
+  });
 });
+
 
 AOS.init({
-    duration: 800,
-    offset: 120,
-    once: false // ensures it only animates once
-  });
+  duration: 800,
+  offset: 120,
+  once: false // ensures it only animates once
+});
 
 lucide.createIcons();
 
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.6, // triggers when 60% of section is visible
+      threshold: 0.6,
     }
   );
 
@@ -52,3 +52,40 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(section);
   });
 });
+
+
+
+ const body = document.body;
+  const toggleDesktop = document.getElementById('theme-toggle-desktop');
+  const toggleMobile = document.getElementById('theme-toggle-mobile');
+  const iconDesktop = document.getElementById('mode-icon-desktop');
+  const iconMobile = document.getElementById('mode-icon-mobile');
+
+  // Start in dark mode unless light mode is saved
+  const savedTheme = localStorage.getItem("dark-mode");
+  const isDark = savedTheme !== "light"; // default dark
+
+  applyTheme(isDark);
+
+  // Event listeners
+  toggleDesktop.addEventListener("change", () => {
+    applyTheme(toggleDesktop.checked);
+  });
+
+  toggleMobile.addEventListener("change", () => {
+    applyTheme(toggleMobile.checked);
+  });
+
+  // Theme toggle logic
+  function applyTheme(isDark) {
+    body.classList.toggle("dark-mode", isDark);
+    body.classList.toggle("light-mode", !isDark);
+
+    toggleDesktop.checked = isDark;
+    toggleMobile.checked = isDark;
+
+    iconDesktop.textContent = isDark ? "🌙" : "☀️";
+    iconMobile.textContent = isDark ? "🌙" : "☀️";
+
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }
