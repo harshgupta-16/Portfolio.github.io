@@ -18,9 +18,9 @@ document.querySelectorAll("#sidebar a").forEach(link => {
 
 
 AOS.init({
-  duration: 500,
+  duration: 650,
   offset: 120,
-  once: false // ensures it only animates once
+  once: false 
 });
 
 lucide.createIcons();
