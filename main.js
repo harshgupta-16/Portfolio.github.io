@@ -55,37 +55,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
- const body = document.body;
-  const toggleDesktop = document.getElementById('theme-toggle-desktop');
-  const toggleMobile = document.getElementById('theme-toggle-mobile');
-  const iconDesktop = document.getElementById('mode-icon-desktop');
-  const iconMobile = document.getElementById('mode-icon-mobile');
+const root = document.documentElement;
+const toggleDesktop = document.getElementById('theme-toggle-desktop');
+const toggleMobile = document.getElementById('theme-toggle-mobile');
+const iconDesktop = document.getElementById('mode-icon-desktop');
+const iconMobile = document.getElementById('mode-icon-mobile');
 
-  // Start in dark mode unless light mode is saved
-  const savedTheme = localStorage.getItem("theme");
-  const isDark = savedTheme !== "light"; // default dark
+const savedTheme = localStorage.getItem("dark");
+const isDark = savedTheme !== "light"; // default to dark
 
-  applyTheme(isDark);
+applyTheme(isDark);
 
-  // Event listeners
-  toggleDesktop.addEventListener("change", () => {
-    applyTheme(toggleDesktop.checked);
-  });
+toggleDesktop.addEventListener("change", () => {
+  applyTheme(toggleDesktop.checked);
+});
 
-  toggleMobile.addEventListener("change", () => {
-    applyTheme(toggleMobile.checked);
-  });
+toggleMobile.addEventListener("change", () => {
+  applyTheme(toggleMobile.checked);
+});
 
-  // Theme toggle logic
-  function applyTheme(isDark) {
-    body.classList.toggle("dark-mode", isDark);
-    body.classList.toggle("light-mode", !isDark);
+function applyTheme(isDark) {
+  root.classList.toggle("dark", isDark);
 
-    toggleDesktop.checked = isDark;
-    toggleMobile.checked = isDark;
+  toggleDesktop.checked = isDark;
+  toggleMobile.checked = isDark;
 
-    iconDesktop.textContent = isDark ? "🌙" : "☀️";
-    iconMobile.textContent = isDark ? "🌙" : "☀️";
+  iconDesktop.textContent = isDark ? "🌙" : "☀️";
+  iconMobile.textContent = isDark ? "🌙" : "☀️";
 
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  }
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+}

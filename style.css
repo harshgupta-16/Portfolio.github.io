@@ -3,38 +3,37 @@ html {
     overflow-x: hidden;
 }
 
-/* Light Theme (default) */
-body.light-mode {
-  background-color: #eaf1ff; /* light gray */
-  color: #0f172a;
+body.dark-mode {
+    background-color: #030712;
+    color: #fff;
 }
 
-/* Dark Theme */
-body.dark-mode {
-  background-color: #030712; /* dark gray/black */
-  color: #fff;
+body.light-mode {
+    background-color: #eaf1ff;
+    color: #0f172a;
 }
 
 /* Smooth transition */
 body {
-  transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Scrollbar base */
 ::-webkit-scrollbar {
     width: 10px;
-    background: #111827;
+    background: #434e67;
 }
 
 ::-webkit-scrollbar-track {
-    background: #111827;
-    border-radius: 10px;
+    background: #434e67;
+    border-radius: 100px;
 }
 
 /* Scrollbar thumb with neon animation */
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgb(0, 136, 255);
+    border: 2px solid #434e67;
+    border-radius: 100px;
+    background: rgb(0, 128, 255);
     background-size: 200% 200%;
 }
 
@@ -90,37 +89,37 @@ body {
 @keyframes solidNeonCycle {
     0% {
         border-color: #00f;
-        box-shadow: 0 0 20px #00f;
+        box-shadow: 0 0 10px 7px #00f;
     }
 
     16% {
         border-color: #0ff;
-        box-shadow: 0 0 20px #0ff;
+        box-shadow: 0 0 10px 7px #0ff;
     }
 
     33% {
         border-color: #0f0;
-        box-shadow: 0 0 20px #0f0;
+        box-shadow: 0 0 10px 7px #0f0;
     }
 
     50% {
         border-color: #ff0;
-        box-shadow: 0 0 20px #ff0;
+        box-shadow: 0 0 10px 7px #ff0;
     }
 
     66% {
         border-color: #f90;
-        box-shadow: 0 0 20px #f90;
+        box-shadow: 0 0 10px 7px #f90;
     }
 
     83% {
         border-color: #f0f;
-        box-shadow: 0 0 20px #f0f;
+        box-shadow: 0 0 10px 7px #f0f;
     }
 
     100% {
         border-color: #f00;
-        box-shadow: 0 0 20px #f00;
+        box-shadow: 0 0 10px 7px #f00;
     }
 }
 

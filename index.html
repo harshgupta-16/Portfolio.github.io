@@ -15,24 +15,28 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
     <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class' // important: enables 'dark:' variants
+        };
+    </script>
 </head>
 
-<body class="bg-gray-100 overflow-x-hidden">
+<body class="bg-gray-200 dark:bg-gray-950 text-black dark:text-white  overflow-x-hidden">
 
     <!-- Navbar -->
-    <nav class="bg-gray-900 nav shadow-md fixed w-full z-50">
+    <nav class="bg-gray-300 dark:bg-gray-900 nav shadow-md fixed w-full z-50">
         <div class="max-w-6xl mx-auto  px-5 py-3 flex justify-between items-center">
-            <h1 class="text-xl font-bold text-gray-100 px-5 md:px-10">HG</h1>
+            <h1 class="text-xl font-bold px-5 md:px-10">HG</h1>
             <!-- Hamburger Icon -->
             <button id="sidebar-toggle" class="md:hidden focus:outline-none">
-                <svg class="w-7 h-7 text-gray-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
 
-            <div class="hidden md:flex space-x-6 text-gray-100 px-5 md:px-10">
+            <div class="hidden md:flex space-x-6 px-5 md:px-10">
                 <a href="#home" class="nav-link hover:font-bold">Home</a>
                 <a href="#about" class="nav-link hover:font-bold">About</a>
                 <a href="#projects" class="nav-link hover:font-bold">Projects</a>
@@ -40,12 +44,12 @@
                 <a href="#certificates" class="nav-link hover:font-bold">Certificates</a>
                 <a href="#contact" class="nav-link hover:font-bold">Contact</a>
                 <!-- Desktop toggle -->
-                <div class="flex items-center gap-1 ml-4">
-                    <span id="mode-icon-desktop" class="text-white text-lg">🌙</span>
+                <div class="flex items-center gap-2">
+                    <span id="mode-icon-desktop">🌙</span>
                     <label class="relative inline-flex items-center cursor-pointer">
                         <input type="checkbox" id="theme-toggle-desktop" class="sr-only peer" />
                         <div
-                            class="w-7 h-4 bg-gray-600 rounded-full peer peer-checked:after:translate-x-full after:absolute after:top-[0px] after:left-[0px] after:bg-white after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-yellow-400">
+                            class="w-7 h-4 bg-gray-400 rounded-full peer peer-checked:after:translate-x-full after:absolute after:top-[0px] after:left-[0px] after:bg-white after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-yellow-400">
                         </div>
                     </label>
                 </div>
@@ -54,16 +58,16 @@
     </nav>
 
     <div id="sidebar"
-        class="fixed top-0 left-0 h-full w-64 bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
+        class="fixed top-0 left-0 h-full w-64 bg-gray-300 dark:bg-gray-900 shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
         <div class="p-4 flex justify-between items-center border-b">
-            <h2 class="text-xl font-semibold text-gray-100">Menu</h2>
-            <button id="sidebar-close" class="text-gray-100">
+            <h2 class="text-xl font-semibold">Menu</h2>
+            <button id="sidebar-close" class="">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
-        <nav class="flex flex-col p-4 space-y-4 text-gray-100">
+        <nav class="flex flex-col p-4 space-y-4">
             <a href="#home" class="nav-link hover:font-bold">Home</a>
             <a href="#about" class="nav-link hover:font-bold">About</a>
             <a href="#projects" class="nav-link hover:font-bold">Projects</a>
@@ -84,7 +88,7 @@
     </div>
 
     <!-- Home -->
-    <section id="home" class="pb-5 min-h-screen flex items-center justify-center px-6">
+    <section id="home" class="pb-5 mt-10 min-h-screen flex items-center justify-center px-6">
         <div class="max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-center gap-6">
 
             <div class="w-full md:w-1/2 text-center md:text-left md:px-10">
@@ -110,7 +114,7 @@
                 </div>
             </div>
 
-            <div class="w-80 h-80 relative mx-auto mt-20 md:ml-auto md:mr-5">
+            <div class="w-80 h-80 relative mx-auto mt-10 md:ml-auto md:mr-5">
                 <div class="animated-neon-border w-full h-full rounded-full flex items-center justify-center">
                     <img src="./images/profile.jpg" style="filter: brightness(0.9);" alt="Avatar"
                         class="rounded-full object-cover w-80 h-80" />
@@ -149,28 +153,29 @@
                         for dark mode and smooth animations.
                     </p>
 
-                    <div class="bg-gray-900 rounded-xl shadow-md p-4 border-l-4 border-pink-500 mb-6"
+                    <div class="bg-pink-300/20 dark:bg-gray-900 rounded-xl shadow-md p-4 border-l-4 border-pink-600 mb-6"
                         data-aos="fade-right">
-                        <h3 class="text-xl font-semibold text-pink-400 mb-1">B.tech in ECE
+                        <h3 class="text-xl font-semibold text-pink-600 mb-1">B.tech in ECE
                         </h3>
-                        <p class="text-2sm text-gray-200 mb-1">Indian Institute of Information Technology Bhopal</p>
-                        <p class="text-sm text-gray-400">2023 – 2027</p>
+                        <p class="text-2sm mb-1">Indian Institute of Information Technology Bhopal</p>
+                        <p class="text-sm text-gray-900 dark:text-gray-400">2023 – 2027</p>
                     </div>
 
                     <h3 class="text-2xl font-semibold mb-4 mt-0" data-aos="fade-left">Achievements 🏆</h3>
 
                     <div class="space-y-4">
-                        <div class="bg-gray-900 shadow rounded-lg p-3 border-l-4 border-green-500" data-aos="fade-up">
-                            <h4 class="font-semibold text-green-400">💡 Smart India Hacathon ' 2023</h4>
-                            <li class="text-2sm text-gray-200">My team got selected among the <b>top 5 finalists</b>
+                        <div class="bg-green-300/10 dark:bg-gray-900 shadow rounded-lg p-3 border-l-4 border-green-500"
+                            data-aos="fade-up">
+                            <h4 class="font-semibold text-green-500">💡 Smart India Hacathon ' 2023</h4>
+                            <li class="text-2sm ">My team got selected among the <b>top 5 finalists</b>
                                 nationwide in the Smart India Hackathon 2023 for developing a solution to analyze school
                                 dropouts.</li>
                         </div>
 
-                        <div class="bg-gray-900 shadow rounded-lg p-3 border-l-4 border-yellow-500" data-aos="fade-up"
-                            data-aos-delay="100">
-                            <h4 class="font-semibold text-yellow-400">🤖 Tech Quiz competition (IEEE Club)</h4>
-                            <li class="text-2sm text-gray-200">Secured 3rd position in a Tech Quiz competition organized
+                        <div class="bg-orange-300/20 dark:bg-gray-900 shadow rounded-lg p-3 border-l-4 border-orange-500"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <h4 class="font-semibold text-orange-500">🤖 Tech Quiz competition (IEEE Club)</h4>
+                            <li class="text-2sm ">Secured 3rd position in a Tech Quiz competition organized
                                 by the IEEE Club which include various questions related with coding, AI,
                                 Machine Learning etc.</li>
                         </div>
@@ -188,125 +193,122 @@
     </section>
 
     <!-- Project -->
-    <section id="projects" class="py-5 px-7 relative overflow-hidden text-white">
+    <section id="projects" class="py-5 px-7 relative overflow-hidden">
         <h2 class="text-5xl py-10 font-bold text-center mb-5 text-blue-500" data-aos="fade-up">
             Projects
         </h2>
 
         <div class="relative max-w-6xl mx-auto flex flex-col items-center gap-20 timeline">
 
+            <!-- Project 1: Gaming Arcade -->
             <div class="relative w-full md:w-3/4" data-aos="fade-up">
                 <div
                     class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(225,0,0,0.7)] z-10">
                 </div>
-                <div class="hover-card border-l-4 border-red-500 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
+                <div
+                    class="hover-card bg-red-50 dark:bg-gray-900 border-l-4 border-red-500 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
                     <img src="./images/gamingarcade.png" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-red-400 font-semibold text-lg">Gaming Arcade</h3>
+                        <h3 class="text-red-500 font-semibold text-lg">Gaming Arcade</h3>
                         <div class="flex gap-2">
-                            <button class="bg-gray-700 px-3 py-0 rounded-full"><a
-                                    href="https://gaming-arcade-sigma.vercel.app/"
-                                    class="text-sm text-red-300 hover:text-white">🌐 Live Demo</a></button>
-                            <button class="bg-gray-900 px-3 py-0 rounded-full"><a
-                                    href="https://github.com/harshgupta-16/GamingArcade.github.io"
-                                    class="text-sm text-red-300 hover:text-white hover:font-semibold "><i
-                                        class="fab fa-github"></i>&nbsp; Code</a></button>
+                            <button class="bg-red-500/20 dark:bg-gray-800 px-3 py-0 rounded-full">
+                                <a href="https://gaming-arcade-sigma.vercel.app/"
+                                    class="text-sm text-red-500 hover:text-black dark:hover:text-white">🌐 Live Demo</a>
+                            </button>
+                            <button class="bg-red-500/30 dark:bg-gray-950 px-3 py-0 rounded-full">
+                                <a href="https://github.com/harshgupta-16/GamingArcade.github.io"
+                                    class="text-sm text-red-500 hover:text-black dark:hover:text-white hover:font-semibold">
+                                    <i class="fab fa-github"></i>&nbsp; Code
+                                </a>
+                            </button>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-300 mb-2">Built a responsive gaming arcade with 4 interactive web
-                        games<i> (Tic-Tac-Toe, Block Breaker, Memory Card Game, and Candy Crush clone)</i></p>
-                    <p class="text-sm text-gray-300 mb-2">Modular JavaScript optimized gameplay, achieving &#60 2.5s
-                        loads and 30% less redundant code.</p>
+                    <p class="text-sm mb-2">Built a responsive gaming arcade with 4 interactive web games
+                        <i>(Tic-Tac-Toe, Block Breaker, Memory Game, Candy Crush clone)</i>
+                    </p>
+                    <p class="text-sm mb-2">Optimized with modular JavaScript and fast loading (under 2.5s).</p>
                     <div class="flex items-center gap-3 mt-5">
-                        <div class="flex items-center gap-2">
-                            <i class="fab fa-html5 text-orange-500"></i>
-                            <span class="text-sm text-gray-400">HTML</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fab fa-css3-alt text-sky-400"></i>
-                            <span class="text-sm text-gray-400">TailwindCSS</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fab fa-js-square text-yellow-400"></i>
-                            <span class="text-sm text-gray-400">JavaScript</span>
-                        </div>
+                        <div class="flex items-center gap-2"><i class="fab fa-html5 text-orange-500"></i><span
+                                class="text-sm text-gray-600 dark:text-gray-400">HTML</span></div>
+                        <div class="flex items-center gap-2"><i class="fab fa-css3-alt text-sky-400"></i><span
+                                class="text-sm text-gray-600 dark:text-gray-400">TailwindCSS</span></div>
+                        <div class="flex items-center gap-2"><i class="fab fa-js-square text-yellow-400"></i><span
+                                class="text-sm text-gray-600 dark:text-gray-400">JavaScript</span></div>
                     </div>
                 </div>
             </div>
 
+            <!-- Project 2: Todo App -->
             <div class="relative w-full md:w-3/4" data-aos="fade-up">
                 <div
                     class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(34,197,94,0.7)] z-10">
                 </div>
-                <div class="hover-card border-l-4 border-green-500 p-6 mt-6 mr-auto rounded-xl max-w-[400px]">
+                <div
+                    class="hover-card bg-green-50 dark:bg-gray-900 border-l-4 border-green-500 p-6 mt-6 mr-auto rounded-xl max-w-[400px]">
                     <img src="./images/todo.png" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-green-400 font-semibold text-lg">Todo App</h3>
+                        <h3 class="text-green-500 font-semibold text-lg">Todo App</h3>
                         <div class="flex gap-2">
-                            <button class="bg-gray-700 px-3 py-0 rounded-full"><a
-                                    href="https://todo-alpha-henna-32.vercel.app/"
-                                    class="text-sm text-green-300 hover:text-white">🌐 Live Demo</a></button>
-                            <button class="bg-gray-900 px-3 py-0 rounded-full"><a
-                                    href="https://github.com/harshgupta-16/Todo"
-                                    class="text-sm text-green-300 hover:text-white hover:font-semibold "><i
-                                        class="fab fa-github"></i>&nbsp; Code</a></button>
+                            <button class="bg-green-500/20 dark:bg-gray-800 px-3 py-0 rounded-full">
+                                <a href="https://todo-alpha-henna-32.vercel.app/"
+                                    class="text-sm text-green-600 hover:text-black dark:hover:text-white">🌐 Live
+                                    Demo</a>
+                            </button>
+                            <button class="bg-green-500/30 dark:bg-gray-950 px-3 py-0 rounded-full">
+                                <a href="https://github.com/harshgupta-16/Todo"
+                                    class="text-sm text-green-600 hover:text-black dark:hover:text-white hover:font-semibold">
+                                    <i class="fab fa-github"></i>&nbsp; Code
+                                </a>
+                            </button>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-300 mb-2">Add, edit, delete, and filter tasks with local storage.</p>
+                    <p class="text-sm mb-2">Add, edit, delete, and filter tasks with local storage.</p>
                     <div class="flex items-center gap-3 mt-5">
-                        <div class="flex items-center gap-1">
-                            <i class="fab fa-html5 text-orange-500"></i>
-                            <span class="text-sm text-gray-400">HTML</span>
-                        </div>
-                        <div class="flex items-center gap-1">
-                            <i class="fab fa-css3-alt text-sky-400"></i>
-                            <span class="text-sm text-gray-400">CSS</span>
-                        </div>
-                        <div class="flex items-center gap-1">
-                            <i class="fab fa-js-square text-yellow-400"></i>
-                            <span class="text-sm text-gray-400">JavaScript</span>
-                        </div>
-                        <div class="flex items-center gap-1">
-                            <i class="fab fa-react text-cyan-400"></i>
-                            <span class="text-sm text-gray-400">React</span>
-                        </div>
+                        <div class="flex items-center gap-2"><i class="fab fa-html5 text-orange-500"></i><span
+                                class="text-sm text-gray-600 dark:text-gray-400">HTML</span></div>
+                        <div class="flex items-center gap-2"><i class="fab fa-css3-alt text-sky-400"></i><span
+                                class="text-sm text-gray-600 dark:text-gray-400">CSS</span></div>
+                        <div class="flex items-center gap-2"><i class="fab fa-js-square text-yellow-400"></i><span
+                                class="text-sm text-gray-600 dark:text-gray-400">JavaScript</span></div>
+                        <div class="flex items-center gap-2"><i class="fab fa-react text-cyan-400"></i><span
+                                class="text-sm text-gray-600 dark:text-gray-400">React</span></div>
                     </div>
                 </div>
             </div>
 
+            <!-- Project 3: Portfolio -->
             <div class="relative w-full md:w-3/4" data-aos="fade-up">
                 <div
-                    class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-yellow-400 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(225,225,0,0.7)] z-10">
+                    class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-orange-400 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(225,165,0,0.7)] z-10">
                 </div>
-                <div class="hover-card border-l-4 border-yellow-400 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
+                <div
+                    class="hover-card bg-orange-50 dark:bg-gray-900 border-l-4 border-orange-500 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
                     <img src="./images/portfolio.png" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-yellow-400 font-semibold text-lg">Portfolio</h3>
+                        <h3 class="text-orange-500 font-semibold text-lg">Portfolio</h3>
                         <div class="flex gap-2">
-                            <button class="bg-gray-700 px-3 py-0 rounded-full"><a
-                                    href="https://portfolio-github-io-two-xi.vercel.app/"
-                                    class="text-sm text-yellow-300 hover:text-white">🌐 Live Demo</a></button>
-                            <button class="bg-gray-900 px-3 py-0 rounded-full"><a
-                                    href="https://github.com/harshgupta-16/Portfolio.github.io"
-                                    class="text-sm text-yellow-300 hover:text-white hover:font-semibold "><i
-                                        class="fab fa-github"></i>&nbsp; Code</a></button>
+                            <button class="bg-orange-400/20 dark:bg-gray-800 px-3 py-0 rounded-full">
+                                <a href="https://portfolio-github-io-two-xi.vercel.app/"
+                                    class="text-sm text-orange-500 hover:text-black dark:hover:text-white">🌐 Live
+                                    Demo</a>
+                            </button>
+                            <button class="bg-orange-400/30 dark:bg-gray-950 px-3 py-0 rounded-full">
+                                <a href="https://github.com/harshgupta-16/Portfolio.github.io"
+                                    class="text-sm text-orange-500 hover:text-black dark:hover:text-white hover:font-semibold">
+                                    <i class="fab fa-github"></i>&nbsp; Code
+                                </a>
+                            </button>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-300 mb-2">Built a personal portfolio to showcase projects, skills, and
-                        achievements with responsive design and smooth animations.</p>
+                    <p class="text-sm mb-2">Personal portfolio with responsive layout, animations, and project showcase.
+                    </p>
                     <div class="flex items-center gap-3 mt-5">
-                        <div class="flex items-center gap-2">
-                            <i class="fab fa-html5 text-orange-500"></i>
-                            <span class="text-sm text-gray-400">HTML</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fab fa-css3-alt text-sky-400"></i>
-                            <span class="text-sm text-gray-400">TailwindCSS</span>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fab fa-js-square text-yellow-400"></i>
-                            <span class="text-sm text-gray-400">JavaScript</span>
-                        </div>
+                        <div class="flex items-center gap-2"><i class="fab fa-html5 text-orange-500"></i><span
+                                class="text-sm text-gray-600 dark:text-gray-400">HTML</span></div>
+                        <div class="flex items-center gap-2"><i class="fab fa-css3-alt text-sky-400"></i><span
+                                class="text-sm text-gray-600 dark:text-gray-400">TailwindCSS</span></div>
+                        <div class="flex items-center gap-2"><i class="fab fa-js-square text-yellow-400"></i><span
+                                class="text-sm text-gray-600 dark:text-gray-400">JavaScript</span></div>
                     </div>
                 </div>
             </div>
@@ -315,40 +317,49 @@
                 <div
                     class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-pink-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(236,72,153,0.7)] z-10">
                 </div>
-                <div class="hover-card border-l-4 border-pink-500 p-6 mt-6 mr-auto rounded-xl max-w-[400px]">
+                <div
+                    class="hover-card bg-pink-50 dark:bg-gray-900 border-l-4 border-pink-500 p-6 mt-6 mr-auto rounded-xl max-w-[400px]">
                     <img src="https://via.placeholder.com/300x150" class="rounded mb-3 w-full h-32 object-cover" />
                     <div class="flex justify-between items-center mb-2">
-                        <h3 class="text-pink-400 font-semibold text-lg">Weather App</h3>
-                        <a href="#" class="text-sm text-pink-300 hover:text-pink-500 hover:underline">🌐 Live Demo</a>
+                        <h3 class="text-pink-500 font-semibold text-lg">Weather App</h3>
+                        <div class="flex gap-2">
+                            <button class="bg-pink-300/30 dark:bg-gray-800 px-3 py-0 rounded-full"><a href="#"
+                                    class="text-sm text-pink-500 hover:text-black hover:dark:text-white">🌐 Live
+                                    Demo</a></button>
+                            <button class="bg-pink-500/30 dark:bg-gray-950 px-3 py-0 rounded-full"><a href="#"
+                                    class="text-sm text-pink-500 hover:text-black hover:dark:text-white hover:font-semibold "><i
+                                        class="fab fa-github"></i>&nbsp; Code</a></button>
+                        </div>
                     </div>
-                    <p class="text-sm text-gray-300 mb-2">Live weather updates with OpenWeather API.</p>
+                    <p class="text-sm mb-2">Live weather updates with OpenWeather API.</p>
                     <div class="flex items-center gap-3 mt-5">
                         <div class="flex items-center gap-2">
                             <i class="fab fa-js-square text-yellow-400"></i>
-                            <span class="text-sm text-gray-400">JavaScript</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-400">JavaScript</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fab fa-css3-alt text-sky-400"></i>
-                            <span class="text-sm text-gray-400">TailwindCSS</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-400">TailwindCSS</span>
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fas fa-cloud text-blue-300"></i>
-                            <span class="text-sm text-gray-400">API</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-400">API</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Glowing Dot: End of Timeline -->
-            <div class="bg-gray-950 relative w-full md:w-3/4 h-20 flex flex-col items-center justify-start"
+            <div class="bg-gray-200 dark:bg-gray-950 w-full md:w-3/4 h-20 flex flex-col items-center justify-start"
                 data-aos="fade-up">
                 <div
                     class="absolute top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-cyan-400 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(34,211,238,0.7)] z-10">
                 </div>
-                <p class="text-xl text-white mt-10 text-center">
+                <p class="text-xl mt-10 text-center">
                     🚀 More projects coming soon...
                 </p>
             </div>
+        </div>
     </section>
 
     <!-- Skills -->
@@ -359,10 +370,10 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
 
                 <!-- Languages -->
-                <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
+                <div class="bg-blue-200/20 dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-2xl border-l-4 border-blue-600 transition hover:-translate-y-1 duration-300"
                     data-aos="fade-up">
-                    <h3 class="text-xl font-semibold text-blue-400 mb-4">Languages</h3>
-                    <div class="space-y-3 text-gray-300 text-sm">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">Languages</h3>
+                    <div class="space-y-3 text-gray-900 dark:text-gray-400 text-sm">
                         <div class="flex items-center gap-2"><i class="fas fa-code text-red-500"></i><span>C /
                                 C++</span></div>
                         <div class="flex items-center gap-2"><i
@@ -379,10 +390,10 @@
                 </div>
 
                 <!-- Frameworks -->
-                <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
+                <div class="bg-orange-200/20 dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-2xl border-l-4 border-orange-500 transition hover:-translate-y-1 duration-300"
                     data-aos="fade-up">
-                    <h3 class="text-xl font-semibold text-green-400 mb-4">Libraries & Frameworks</h3>
-                    <div class="space-y-3 text-gray-300 text-sm">
+                    <h3 class="text-xl font-semibold text-orange-500 mb-4">Libraries & Frameworks</h3>
+                    <div class="space-y-3 text-gray-900 dark:text-gray-400 text-sm">
                         <div class="flex items-center gap-2"><i
                                 class="fab fa-react text-cyan-400"></i><span>React.js</span></div>
                         <div class="flex items-center gap-2"><i
@@ -395,10 +406,10 @@
                 </div>
 
                 <!-- Stack -->
-                <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
+                <div class="bg-pink-200/20 dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-2xl border-l-4 border-pink-500 transition hover:-translate-y-1 duration-300"
                     data-aos="fade-up">
-                    <h3 class="text-xl font-semibold text-pink-400 mb-4">Technologies / Stack</h3>
-                    <div class="space-y-3 text-gray-300 text-sm">
+                    <h3 class="text-xl font-semibold text-pink-500 mb-4">Technologies / Stack</h3>
+                    <div class="space-y-3 text-gray-900 dark:text-gray-400 text-sm">
                         <div class="flex items-center gap-2"><i
                                 class="fas fa-layer-group text-yellow-400"></i><span>MERN Stack</span></div>
                         <div class="flex items-center gap-2"><i
@@ -413,10 +424,10 @@
                 </div>
 
                 <!-- Tools -->
-                <div class="bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-lg transition hover:-translate-y-1 duration-300"
+                <div class="bg-green-200/20 dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-2xl border-l-4 border-green-500 transition hover:-translate-y-1 duration-300"
                     data-aos="fade-up">
-                    <h3 class="text-xl font-semibold text-cyan-400 mb-4">Developer Tools</h3>
-                    <div class="space-y-3 text-gray-300 text-sm">
+                    <h3 class="text-xl font-semibold text-green-500 mb-4">Developer Tools</h3>
+                    <div class="space-y-3 text-gray-900 dark:text-gray-400 text-sm">
                         <div class="flex items-center gap-2"><i class="fab fa-github text-white"></i><span>Git /
                                 GitHub</span></div>
                         <div class="flex items-center gap-2"><i class="fas fa-terminal text-gray-400"></i><span>VS
@@ -433,51 +444,52 @@
     </section>
 
     <!-- Certificates -->
-    <section id="certificates" class=" text-white py-10 px-7">
+    <section id="certificates" class=" py-10 px-7">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-5xl font-bold text-center my-12 text-blue-500" data-aos="fade-up">
                 Certificates
             </h2>
             <div class="flex flex-wrap gap-8 justify-center">
 
-                <div class="bg-gray-900 max-w-[400px] shadow rounded-lg p-5 border-l-4 border-yellow-500"
+                <div class="bg-orange-200/20 dark:bg-gray-900 max-w-[400px] shadow rounded-lg p-5 border-l-4 border-orange-500"
                     data-aos="fade-up" data-aos-delay="100">
-                    <h4 class="font-semibold text-yellow-400">Meta Front-End Development</h4>
+                    <h4 class="font-semibold text-orange-500">Meta Front-End Development</h4>
                     <br>
-                    <p class="text-2sm text-gray-300 mb-2">Gained hands-on experience in building responsive web
+                    <p class="text-2sm mb-2">Gained hands-on experience in building responsive web
                         interfaces using HTML, CSS, and JavaScript.</p>
                     <br>
                     <div class="flex justify-between">
-                        <p class="text-sm text-gray-400">Coursera – 2024</p>
+                        <p class="text-sm text-gray-900 dark:text-gray-400">Coursera – 2024</p>
                         <a href="https://www.coursera.org/account/accomplishments/verify/KKSDDB6ZGU9C"
-                            class="text-sm text-yellow-100 hover:text-yellow-300 ">🔗 Link</a>
+                            class="text-sm text-orange-700 dark:text-orange-200 hover:font-bold ">🔗 Link</a>
                     </div>
                 </div>
 
-                <div class="bg-gray-900 max-w-[400px] shadow rounded-lg p-5 border-l-4 border-purple-500"
+                <div class="bg-purple-200/20 dark:bg-gray-900 max-w-[400px] shadow rounded-lg p-5 border-l-4 border-purple-500"
                     data-aos="fade-up" data-aos-delay="100">
                     <h4 class="font-semibold text-purple-400">HTML and CSS in Depth</h4>
                     <br>
-                    <p class="text-2sm text-gray-300 mb-2">Developed strong skills in semantic HTML, advanced CSS
+                    <p class="text-2sm mb-2">Developed strong skills in semantic HTML, advanced CSS
                         styling, and responsive design.</p>
                     <br>
                     <div class="flex justify-between">
-                        <p class="text-sm text-gray-400">Coursera – 2024</p>
+                        <p class="text-sm text-gray-900 dark:text-gray-400">Coursera – 2024</p>
                         <a href="https://www.coursera.org/account/accomplishments/verify/ZF4F39QFK5AH"
-                            class="text-sm text-purple-100 hover:text-purple-300 ">🔗 Link</a>
+                            class="text-sm text-purple-700 dark:text-purple-200 hover:font-bold ">🔗 Link</a>
                     </div>
                 </div>
 
-                <div class="bg-gray-900 max-w-[400px] shadow rounded-lg p-5 border-l-4 border-orange-500"
+                <div class="bg-green-200/20 dark:bg-gray-900 max-w-[400px] shadow rounded-lg p-5 border-l-4 border-green-500"
                     data-aos="fade-up" data-aos-delay="100">
-                    <h4 class="font-semibold text-orange-400">Meta Front-End Development</h4>
+                    <h4 class="font-semibold text-green-500">Meta Front-End Development</h4>
                     <br>
-                    <p class="text-2sm text-gray-300 mb-2">Gained hands-on experience in building responsive web
+                    <p class="text-2sm mb-2">Gained hands-on experience in building responsive web
                         interfaces using HTML, CSS, and JavaScript.</p>
                     <br>
                     <div class="flex justify-between">
-                        <p class="text-sm text-gray-400">Coursera – 2024</p>
-                        <a href="#" class="text-sm text-orange-100 hover:text-orange-300 ">🔗 Link</a>
+                        <p class="text-sm text-gray-900 dark:text-gray-400">Coursera – 2024</p>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/KKSDDB6ZGU9C"
+                            class="text-sm text-green-700 dark:text-green-200 hover:font-bold ">🔗 Link</a>
                     </div>
                 </div>
             </div>
@@ -535,25 +547,23 @@
 
                 <div class="md:w-1/2">
                     <form
-                        class="space-y-5 backdrop-blur-md dark:border-0 dark:bg-white/10 border border-white/40 dark:border-white/20 shadow-lg rounded-xl p-6">
+                        class="space-y-5 backdrop-blur-md bg-white/60 dark:bg-white/10 border border-gray-300 dark:border-white/20 shadow-lg rounded-xl p-6 transition-all duration-300">
+
                         <input type="text" placeholder="Your Name" required
-                            class="w-full border-2 border-blue-600  px-4 py-3 dark:bg-white/10 text-gray-800 dark:text-white placeholder-gray-600 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            class="w-full border border-gray-400 dark:border-white/30 px-4 py-3 bg-white/70 dark:bg-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
 
                         <input type="email" placeholder="Your Email" required
-                            class="w-full border-2 border-blue-600 px-4 py-3 bg-white/20 dark:bg-white/10 text-gray-800 dark:text-white placeholder-gray-600 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            class="w-full border border-gray-400 dark:border-white/30 px-4 py-3 bg-white/70 dark:bg-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
 
                         <textarea rows="5" placeholder="Your Message" required
-                            class="w-full border-2 border-blue-600 px-4 py-3 bg-white/20 dark:bg-white/10 text-gray-800 dark:text-white placeholder-gray-600 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            class="w-full border border-gray-400 dark:border-white/30 px-4 py-3 bg-white/70 dark:bg-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
 
                         <button type="submit"
-                            class="bg-blue-600 hover:bg-blue-800 transition px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:shadow-xl">
+                            class="w-full bg-blue-600 hover:bg-blue-800 transition px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
                             Send Message
                         </button>
                     </form>
                 </div>
-
-
-
             </div>
         </div>
     </section>
