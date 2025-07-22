@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -15,6 +21,7 @@ body.light-mode {
 
 /* Smooth transition */
 body {
+    margin: 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -41,6 +48,44 @@ body {
     color: rgb(16, 127, 255);
     font-weight: bold;
 }
+
+/* Fullscreen loader background */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    color: white;
+}
+
+/* Simple spinner */
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #00bfff;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
 
 .nav {
     border-bottom: 1px solid red;

@@ -24,6 +24,7 @@ AOS.init({
   once: false
 });
 
+
 //For app icons
 lucide.createIcons();
 
@@ -123,4 +124,20 @@ form.addEventListener("submit", async (e) => {
     alert("❌ An error occurred while sending the message.");
     console.error(err);
   }
+});
+
+
+// Wait for full page load including images, styles, etc.
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  const content = document.getElementById("content");
+
+  // Optional: fade out effect
+  preloader.style.opacity = "0";
+  preloader.style.transition = "opacity 0.8s ease";
+
+  setTimeout(() => {
+    preloader.style.display = "none";
+    content.style.display = "block";
+  }, 800); // Match transition time
 });
