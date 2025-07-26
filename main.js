@@ -18,6 +18,7 @@ document.querySelectorAll("#sidebar a").forEach(link => {
 });
 
 
+// Now initialize AOS
 AOS.init({
   duration: 650,
   offset: 120,
