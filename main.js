@@ -146,38 +146,54 @@ window.addEventListener("load", () => {
 
 //ChatBot
 function toggleChat() {
-    const container = document.getElementById("chatbot-container");
-    container.style.display = container.style.display === "none" ? "block" : "none";
+  const container = document.getElementById("chatbot-container");
+  container.style.display = container.style.display === "none" ? "block" : "none";
 }
 
 const input = document.getElementById("chat-input");
 const chatbox = document.getElementById("chatbox");
 
 input.addEventListener("keypress", function (e) {
-    if (e.key === "Enter" && input.value.trim() !== "") {
-        const userMessage = input.value.trim();
-        chatbox.innerHTML += `<div><strong>You:</strong> ${userMessage}</div>`;
-        input.value = "";
+  if (e.key === "Enter" && input.value.trim() !== "") {
+    const userMessage = input.value.trim();
+    chatbox.innerHTML += `<div><strong>You:</strong> ${userMessage}</div>`;
+    input.value = "";
 
-        fetch("http://localhost:5000/chat", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ message: userMessage })
-        })
-        .then(res => res.json())
-        .then(data => {
-            chatbox.innerHTML += `<div><strong>Bot:</strong> ${data.reply}</div>`;
-            chatbox.scrollTop = chatbox.scrollHeight;
-        })
-        .catch(err => {
-            chatbox.innerHTML += `<div style="color:red;">⚠️ Error contacting bot.</div>`;
-        });
-    }
+    fetch("http://localhost:5000/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ message: userMessage })
+    })
+      .then(res => res.json())
+      .then(data => {
+        chatbox.innerHTML += `<div><strong>Bot:</strong> ${data.reply}</div>`;
+        chatbox.scrollTop = chatbox.scrollHeight;
+      })
+      .catch(err => {
+        chatbox.innerHTML += `<div style="color:red;">⚠️ Error contacting bot.</div>`;
+      });
+  }
 });
 
+
 function toggleChat() {
-    const bot = document.getElementById("chatbot-container");
-    bot.classList.toggle("hidden");
+  const bot = document.getElementById("chatbot-container");
+  bot.classList.toggle("hidden");
+}
+
+
+//letter-by-letter animation effect for name
+const nameText = "Harsh Gupta";
+const nameElement = document.getElementById("typingName");
+let i = 0;
+
+function typeName() {
+  if (i < nameText.length) {
+    nameElement.textContent += nameText.charAt(i);
+    i++;
+    setTimeout(typeName, 200); // typing speed (ms)
   }
+}
+typeName();
