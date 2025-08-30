@@ -32,15 +32,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #434e67;
+  background: #acacacc0;
   border-radius: 100px;
 }
 
 /* Scrollbar thumb with neon animation */
 ::-webkit-scrollbar-thumb {
-  border: 2px solid #434e67;
+  /* border: 1px solid black; */
   border-radius: 100px;
-  background: rgb(0, 128, 255);
+  background: rgba(1, 56, 255, 1);
   background-size: 200% 200%;
 }
 
