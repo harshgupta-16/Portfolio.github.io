@@ -277,8 +277,8 @@ ISC License - See `package.json` for details
 ## 🤝 Connect With Me
 
 - **GitHub:** [harshgupta-16](https://github.com/harshgupta-16)
-- **Email:** [Your Email](mailto:your-email@example.com)
-- **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/your-profile)
+- **Email:** [Your Email](mailto:harsh16022005@gmail.com)
+- **LinkedIn:** [Your LinkedIn Profile]([https://linkedin.com/in/your-profile](https://www.linkedin.com/in/harsh-gupta-5587b528a/))
 
 ---
 
