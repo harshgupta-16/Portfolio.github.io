@@ -4,724 +4,843 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Harsh Gupta</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Harsh Gupta — Full Stack Developer & Competitive Programmer</title>
+    <meta name="description"
+        content="Harsh Gupta is a Full Stack Developer, Competitive Programmer, and B.Tech student at IIIT Bhopal. Explore projects, experience, and achievements." />
+    <meta name="author" content="Harsh Gupta" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Permanent+Marker&family=Protest+Guerrilla&family=Roboto+Slab:wght@700&family=Rubik+Mono+One&family=Rubik:ital,wght@0,503;1,503&family=Unlock&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class' // important: enables 'dark:' variants
-        };
-    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-gray-200 dark:bg-gray-950 text-black dark:text-white  overflow-x-hidden">
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
-    <!-- <div id="preloader">
-        <div class="spinner"></div>
-        <h1>Loading portfolio...</h1>
-    </div> -->
+    <!-- ============================================
+         NAVBAR
+         ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="#hero" class="navbar-logo">H<span>G</span></a>
 
-    <div id="content">
-        <!-- Navbar -->
-        <nav class="bg-blue-300 dark:bg-gray-900 nav shadow-md fixed top-0 w-full z-50">
-            <div class="max-w-6xl mx-auto  px-5 py-3 flex justify-between items-center">
-                <h1 class="text-xl font-bold px-5 md:px-10">HG</h1>
-                <!-- Hamburger Icon -->
-                <button id="sidebar-toggle" class="md:hidden focus:outline-none">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-
-                <div class="hidden font-bold md:flex space-x-8 px-5 md:px-10">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#experiences" class="nav-link">Experiences</a>
-                    <a href="#projects" class="nav-link">Projects</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                    <!-- Desktop toggle -->
-                    <div class="flex items-center gap-2">
-                        <span id="mode-icon-desktop">🌙</span>
-                        <label class="relative inline-flex items-center cursor-pointer">
-                            <input type="checkbox" id="theme-toggle-desktop" class="sr-only peer" />
-                            <div
-                                class="w-7 h-4 bg-gray-400 rounded-full peer peer-checked:after:translate-x-full after:absolute after:top-[0px] after:left-[0px] after:bg-white after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-yellow-400">
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <div id="sidebar"
-            class="bg-blue-300 dark:bg-gray-900 fixed top-0 left-0 h-full w-64 shadow-lg transform -translate-x-full transition-transform duration-300 z-50">
-            <div class="p-4 flex justify-between items-center border-b">
-                <h2 class="text-xl font-semibold">Menu</h2>
-                <button id="sidebar-close" class="">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <nav class="flex flex-col p-4 space-y-4">
-                <a href="#home" class="nav-link">Home</a>
+            <div class="navbar-links" id="navbar-links">
                 <a href="#about" class="nav-link">About</a>
-                <a href="#experiences" class="nav-link">Experiences</a>
+                <a href="#experience" class="nav-link">Experience</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#contact" class="nav-link">Contact</a>
-                <!-- Mobile toggle -->
-                <div class="flex items-center gap-1 ml-4">
-                    <span id="mode-icon-mobile" class="text-white text-lg">🌙</span>
-                    <label class="relative inline-flex items-center cursor-pointer">
-                        <input type="checkbox" id="theme-toggle-mobile" class="sr-only peer" />
-                        <div
-                            class="w-11 h-6 bg-gray-600 rounded-full peer peer-checked:after:translate-x-full after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-yellow-400">
-                        </div>
-                    </label>
-                </div>
-            </nav>
-        </div>
-
-        <!-- Home -->
-        <section id="home"
-            class="bg-[#f9f9f9] dark:bg-gray-950 pb-5 mt-10 min-h-screen flex items-center justify-center px-20">
-            <div class="max-w-7xl w-full flex flex-col-reverse md:flex-row items-center justify-center gap-10">
-
-                <div class="w-full md:w-2/3 text-center md:text-left md:px-3">
-                    <h1 class="text-4xl sm:text-6xl font-bold mb-4 ">
-                        Hi, I'm <span id="typingName" class="text-blue-500 "></span>
-                    </h1>
-                    <h2 class="text-xl sm:text-[1.4rem] mb-4">
-                        <i>Web Developer | JavaScript Enthusiast | React Developer</i>
-                    </h2>
-                    <p class="mb-6 sm:text-[1.1rem]">
-                        I craft fast, responsive, and user-friendly web experiences. Passionate about clean UI and
-                        interactive design.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#projects"
-                            class="bg-blue-600 font-semibold px-6 py-3 rounded-full text-white hover:bg-blue-900 transition">
-                            View Projects
-                        </a>
-                        <a href="#contact"
-                            class="border-2 border-blue-600 font-semibold px-6 py-3 rounded-full text-blue-600 hover:bg-blue-600 hover:text-white transition">
-                            Contact Me
-                        </a>
-                    </div>
-                </div>
-
-                <div class="md:w-1/3 mt-10 flex justify-center ">
-                    <div class="relative perspective-1000">
-                        <div
-                            class="animated-neon-border w-80 h-80 md:w-80 md:h-80 bg-white rounded-full overflow-hidden border-1 shadow-xl">
-                            <img src="./images/profile.jpg" alt="Harsh Gupta" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- About -->
-        <section id="about" class="bg-[#f9f9f9] dark:bg-gray-950 py-16 px-7">
-            <div class="max-w-6xl mx-auto">
-
-                <h1 class=" text-5xl font-bold text-center mb-16 mt-5 text-blue-500" data-aos="fade-up">
-                    About Me
-                </h1>
-
-                <div class="flex flex-col md:flex-row items-center gap-20 mx-0" data-aos="fade-up">
-
-                    <div class="w-full md:w-1/4 md:ml-10">
-                        <!-- Avatar Image -->
-                        <img src="./images/about.jpg" style="filter: brightness(0.9);" alt="About Me"
-                            class="rounded-lg shadow-lg w-full h-auto border-0  mb-4" />
-                    </div>
-
-                    <div class="w-full md:w-3/4">
-                        <p class="text-0.5xl leading-relaxed mb-5">
-                            I’m a full-stack developer from IIIT Bhopal, passionate about building high-performance,
-                            responsive, and visually appealing web applications. I love turning complex problems into
-                            clean, efficient, and user-friendly solutions.
-                            <br><br>
-                            With expertise in both frontend and backend, I work across the MERN stack and enjoy creating
-                            seamless, interactive experiences using modern libraries and frameworks. I thrive on
-                            learning new technologies and bringing ideas to life with code.
-                        </p>
-                        <ul class="space-y-2">
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                Full-stack development
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                MERN stack expertise
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                Responsive & modern UI
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <i class="fas fa-check-circle text-blue-500"></i>
-                                Smooth, interactive apps
-                            </li>
-                        </ul>
-
-                        <br>
-
-                        <!-- Download Resume Button -->
-                        <a href="https://drive.google.com/file/d/1VP_K8Jibus8Hc1SyTEKspzBP-Qo2pz8B/view" target="_blank"
-                            rel="noopener noreferrer"
-                            class="inline-block bg-blue-600 text-white px-5 py-2 rounded-full shadow-md hover:bg-blue-900 transition duration-300">
-                            📝 Resume
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experiences -->
-        <section id="experiences" class="bg-[#f9f9f9] dark:bg-gray-950 py-10 px-7">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-5xl font-bold text-center my-12 text-blue-500" data-aos="fade-up">
-                    My Journey
-                </h2>
-                <p class="text-center text-gray-600 dark:text-gray-300 mt-[-30px] mb-16 max-w-2xl mx-auto"
-                    data-aos="fade-up">
-                    My professional path and educational background that shaped my expertise.
-                </p>
-                <div class="flex flex-wrap gap-20 justify-center ">
-
-                    <!-- Card 1 -->
-                    <div class="relative mt-10 w-80 h-[250px] flex justify-center items-center group"
-                        data-aos="fade-up">
-                        <!-- Gradient skewed background -->
-                        <div class="absolute top-0 left-[50px] w-1/2 h-full rounded-xl
-                bg-gradient-to-br from-red-100 via-red-500 to-red-900 skew-x-12 blur-2xl
-                transition-all duration-500 group-hover:skew-x-0 group-hover:left-5 group-hover:w-[calc(100%-90px)]">
-                        </div>
-
-                        <!-- Glow overlay -->
-                        <div class="absolute top-0 left-0 w-full h-full rounded-xl bg-white/10 dark:bg-black/20 backdrop-blur-lg
-                opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-
-                        <!-- Card content -->
-                        <div class="relative border-l-4 border-red-600 flex flex-col justify-center h-[200px] z-10 bg-white/80 dark:bg-gray-800/70 backdrop-blur-md p-5 rounded-xl shadow-lg
-                text-gray-900 dark:text-white">
-                            <div class="flex flex-row justify-between items-center">
-                                <h2 class="text-2xl font-bold mb-2">💡Smart India Hackathon</h2>
-                                <p class="text-2sm text-red-500 ">2023
-                                </p>
-                            </div>
-                            <p class="text-sm leading-5 mb-4">My team got selected among the <b>top 5 finalists</b>
-                                nationwide in the Smart India Hackathon 2023 for developing a solution to analyze
-                                school dropouts.</p>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="relative mt-10 w-80 h-[250px] flex justify-center items-center group"
-                        data-aos="fade-up">
-                        <!-- Gradient skewed background -->
-                        <div class="absolute top-0 left-[50px] w-1/2 h-full rounded-xl
-              bg-gradient-to-br from-yellow-100 via-yellow-500 to-yellow-900 skew-x-12 blur-2xl
-              transition-all duration-500 group-hover:skew-x-0 group-hover:left-5 group-hover:w-[calc(100%-90px)]">
-                        </div>
-
-                        <!-- Glow overlay -->
-                        <div class="absolute top-0 left-0 w-full h-full rounded-xl bg-white/10 dark:bg-black/20 backdrop-blur-lg
-              opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                        </div>
-
-                        <!-- Card content -->
-
-                        <div class="relative border-l-4 border-yellow-600 flex flex-col justify-center h-[200px] z-10 bg-white/80 dark:bg-gray-800/70 backdrop-blur-md p-5 rounded-xl shadow-lg
-                text-gray-900 dark:text-white">
-                            <div class="flex flex-row justify-between items-center">
-                                <h2 class="text-2xl font-bold mb-2">🤖Tech Quiz</h2>
-                                <p class="text-2sm text-yellow-500 ">2024
-                                </p>
-                            </div>
-                            <p class="text-sm leading-5 mb-4">Secured 3rd position in a Tech Quiz competition organized
-                                by the IEEE Club which include various questions related with coding, AI, Machine
-                                Learning etc.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Project -->
-        <section id="projects" class="bg-[#f9f9f9] dark:bg-gray-950 py-5 px-7 relative overflow-hidden">
-            <h2 class="text-5xl py-10 font-bold text-center mb-5 text-blue-500" data-aos="fade-up">
-                Projects
-            </h2>
-
-            <div class="relative max-w-6xl mx-auto flex flex-col items-center gap-20 timeline">
-
-                <!-- Project 1: Gaming Arcade -->
-                <div class="relative w-full md:w-3/4" data-aos="fade-up">
-                    <div
-                        class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-red-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(225,0,0,0.7)] z-10">
-                    </div>
-                    <div
-                        class="hover-card bg-red-50 dark:bg-gray-900 border-l-4 border-red-500 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
-                        <img src="./images/gamingarcade.png" class="rounded mb-3 w-full h-32 object-cover" />
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-red-500 font-semibold text-lg">Gaming Arcade</h3>
-                            <div class="flex gap-2">
-                                <button class="bg-red-500/20 dark:bg-gray-800 px-3 py-0 rounded-full">
-                                    <a href="https://gaming-arcade-sigma.vercel.app/"
-                                        class="text-sm text-red-500 hover:text-black dark:hover:text-white">🌐 Live
-                                        Demo</a>
-                                </button>
-                                <button class="bg-red-500/30 dark:bg-gray-950 px-3 py-0 rounded-full">
-                                    <a href="https://github.com/harshgupta-16/GamingArcade.github.io"
-                                        class="text-sm text-red-500 hover:text-black dark:hover:text-white hover:font-semibold">
-                                        <i class="fab fa-github"></i>&nbsp; Code
-                                    </a>
-                                </button>
-                            </div>
-                        </div>
-                        <p class="text-sm mb-2">Built a responsive gaming arcade with 4 interactive web games
-                            <i>(Tic-Tac-Toe, Block Breaker, Memory Game, Candy Crush clone)</i>
-                        </p>
-                        <p class="text-sm mb-2">Optimized with modular JavaScript and fast loading (under 2.5s).</p>
-                        <div class="flex items-center gap-3 mt-5">
-                            <div class="flex items-center gap-2"><i class="fab fa-html5 text-orange-500"></i><span
-                                    class="text-sm text-gray-600 dark:text-gray-400">HTML</span></div>
-                            <div class="flex items-center gap-2"><i class="fab fa-css3-alt text-sky-400"></i><span
-                                    class="text-sm text-gray-600 dark:text-gray-400">TailwindCSS</span></div>
-                            <div class="flex items-center gap-2"><i class="fab fa-js-square text-yellow-400"></i><span
-                                    class="text-sm text-gray-600 dark:text-gray-400">JavaScript</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: Sea Gaurdian -->
-                <div class="relative w-full md:w-3/4" data-aos="fade-up">
-                    <div
-                        class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(34,197,94,0.7)] z-10">
-                    </div>
-                    <div
-                        class="hover-card bg-green-50 dark:bg-gray-900 border-l-4 border-green-500 p-6 mt-6 mr-auto rounded-xl max-w-[400px]">
-                        <img src="./images/sea.png" class="rounded mb-3 w-full h-full object-cover" alt="A serene coastal scene featuring gentle waves lapping against the shore, with a clear blue sky above. The image captures the tranquility of the sea, evoking a sense of peace and relaxation." />
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-green-500 font-semibold text-lg">Sea Gaurdian</h3>
-                            <div class="flex gap-2">
-                                <button class="bg-green-500/20 dark:bg-gray-800 px-3 py-0 rounded-full">
-                                    <a href="https://seagaurdian.vercel.app/"
-                                        class="text-sm text-green-600 hover:text-black dark:hover:text-white">🌐 Live
-                                        Demo</a>
-                                </button>
-                                <button class="bg-green-500/30 dark:bg-gray-950 px-3 py-0 rounded-full">
-                                    <a href="https://github.com/harshgupta-16/sea_gaurdian"
-                                        class="text-sm text-green-600 hover:text-black dark:hover:text-white hover:font-semibold">
-                                        <i class="fab fa-github"></i>&nbsp; Code
-                                    </a>
-                                </button>
-                            </div>
-                        </div>
-                        <p class="text-sm mb-2">Built a community-driven platform that empowers citizens to report
-                            coastal hazards and receive instant alerts from INCOIS in real time.</p>
-                        <div class="flex flex-wrap items-center gap-3 mt-5">
-                            <div class="flex items-center gap-2">
-                                <i class="fab fa-html5 text-orange-500"></i>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">HTML5</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fab fa-css3-alt text-sky-400"></i>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">CSS3</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fab fa-js-square text-yellow-400"></i>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">JavaScript (ES2020+)</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fab fa-react text-cyan-400"></i>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">React (UI Prototype)</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-wind text-blue-500"></i>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">Tailwind CSS</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-database text-green-500"></i>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">Supabase (Auth & DB)</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-map-marker-alt text-red-500"></i>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">Geolocation API</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-save text-amber-500"></i>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">IndexedDB (Offline
-                                    Storage)</span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-bolt text-yellow-500"></i>
-                                <span class="text-sm text-gray-600 dark:text-gray-400">Lighthouse Optimization</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Project 3: Portfolio -->
-                <div class="relative w-full md:w-3/4" data-aos="fade-up">
-                    <div
-                        class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-orange-400 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(225,165,0,0.7)] z-10">
-                    </div>
-                    <div
-                        class="hover-card bg-orange-50 dark:bg-gray-900 border-l-4 border-orange-500 p-6 mt-6 ml-auto rounded-xl max-w-[400px]">
-                        <img src="./images/portfolio.png" class="rounded mb-3 w-full h-full object-cover" />
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-orange-500 font-semibold text-lg">Portfolio</h3>
-                            <div class="flex gap-2">
-                                <button class="bg-orange-400/20 dark:bg-gray-800 px-3 py-0 rounded-full">
-                                    <a href="https://portfolio-github-io-two-xi.vercel.app/"
-                                        class="text-sm text-orange-500 hover:text-black dark:hover:text-white">🌐 Live
-                                        Demo</a>
-                                </button>
-                                <button class="bg-orange-400/30 dark:bg-gray-950 px-3 py-0 rounded-full">
-                                    <a href="https://github.com/harshgupta-16/Portfolio.github.io"
-                                        class="text-sm text-orange-500 hover:text-black dark:hover:text-white hover:font-semibold">
-                                        <i class="fab fa-github"></i>&nbsp; Code
-                                    </a>
-                                </button>
-                            </div>
-                        </div>
-                        <p class="text-sm mb-2">Personal portfolio with responsive layout, animations, and project
-                            showcase.
-                        </p>
-                        <div class="flex items-center gap-3 mt-5">
-                            <div class="flex items-center gap-2"><i class="fab fa-html5 text-orange-500"></i><span
-                                    class="text-sm text-gray-600 dark:text-gray-400">HTML</span></div>
-                            <div class="flex items-center gap-2"><i class="fab fa-css3-alt text-sky-400"></i><span
-                                    class="text-sm text-gray-600 dark:text-gray-400">TailwindCSS</span></div>
-                            <div class="flex items-center gap-2"><i class="fab fa-js-square text-yellow-400"></i><span
-                                    class="text-sm text-gray-600 dark:text-gray-400">JavaScript</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: Todo App -->
-                <div class="relative w-full md:w-3/4" data-aos="fade-up">
-                    <div
-                        class="absolute top-[-5px] left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(34,197,94,0.7)] z-10">
-                    </div>
-                    <div
-                        class="hover-card bg-pink-50 dark:bg-gray-900 border-l-4 border-pink-500 p-6 mt-6 mr-auto rounded-xl max-w-[400px]">
-                        <img src="./images/todo.png" class="rounded mb-3 w-full h-32 object-cover" />
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-pink-500 font-semibold text-lg">Todo App</h3>
-                            <div class="flex gap-2">
-                                <button class="bg-pink-500/20 dark:bg-gray-800 px-3 py-0 rounded-full">
-                                    <a href="https://todo-alpha-henna-32.vercel.app/"
-                                        class="text-sm text-pink-600 hover:text-black dark:hover:text-white">🌐 Live
-                                        Demo</a>
-                                </button>
-                                <button class="bg-pink-500/30 dark:bg-gray-950 px-3 py-0 rounded-full">
-                                    <a href="https://github.com/harshgupta-16/Todo"
-                                        class="text-sm text-pink-600 hover:text-black dark:hover:text-white hover:font-semibold">
-                                        <i class="fab fa-github"></i>&nbsp; Code
-                                    </a>
-                                </button>
-                            </div>
-                        </div>
-                        <p class="text-sm mb-2">Add, edit, delete, and filter tasks with local storage.</p>
-                        <div class="flex items-center gap-3 mt-5">
-                            <div class="flex items-center gap-2"><i class="fab fa-html5 text-orange-500"></i><span
-                                    class="text-sm text-gray-600 dark:text-gray-400">HTML</span></div>
-                            <div class="flex items-center gap-2"><i class="fab fa-css3-alt text-sky-400"></i><span
-                                    class="text-sm text-gray-600 dark:text-gray-400">CSS</span></div>
-                            <div class="flex items-center gap-2"><i class="fab fa-js-square text-yellow-400"></i><span
-                                    class="text-sm text-gray-600 dark:text-gray-400">JavaScript</span></div>
-                            <div class="flex items-center gap-2"><i class="fab fa-react text-cyan-400"></i><span
-                                    class="text-sm text-gray-600 dark:text-gray-400">React</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Glowing Dot: End of Timeline -->
-                <div class="bg-blue-100/10 dark:bg-gray-950 w-full md:w-3/4 h-20 flex flex-col items-center justify-start"
-                    data-aos="fade-up">
-                    <div
-                        class="absolute top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-cyan-400 rounded-full border-4 border-white shadow-[0_0_12px_4px_rgba(34,211,238,0.7)] z-10">
-                    </div>
-                    <p class="text-xl mt-10 text-center">
-                        🚀 More projects coming soon...
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills" class="bg-[#f9f9f9] dark:bg-gray-950 py-10 px-7 text-white">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-5xl font-bold text-center py-8 mb-8 text-blue-500" data-aos="fade-up">Skills</h2>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
-
-                    <!-- Languages -->
-                    <div class="bg-blue-200/20 dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-2xl border-l-4 border-blue-600 transition hover:-translate-y-1 duration-300"
-                        data-aos="fade-up">
-                        <h3 class="text-xl font-semibold text-blue-600 mb-4">Languages</h3>
-                        <div class="space-y-3 text-gray-900 dark:text-gray-400 text-sm">
-                            <div class="flex items-center gap-2"><i class="fas fa-code text-red-500"></i><span>C /
-                                    C++</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fab fa-html5 text-orange-500"></i><span>HTML</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fab fa-css3-alt text-blue-500"></i><span>CSS</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fab fa-js text-yellow-400"></i><span>JavaScript</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fas fa-database text-green-500"></i><span>SQL</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fas fa-square-root-variable text-purple-500"></i><span>MATLAB</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Frameworks -->
-                    <div class="bg-orange-200/20 dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-2xl border-l-4 border-orange-500 transition hover:-translate-y-1 duration-300"
-                        data-aos="fade-up">
-                        <h3 class="text-xl font-semibold text-orange-500 mb-4">Libraries & Frameworks</h3>
-                        <div class="space-y-3 text-gray-900 dark:text-gray-400 text-sm">
-                            <div class="flex items-center gap-2"><i
-                                    class="fab fa-react text-cyan-400"></i><span>React.js</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fab fa-bootstrap text-pink-500"></i><span>Bootstrap</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fab fa-css3-alt text-sky-400"></i><span>Tailwind
-                                    CSS</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fas fa-forward text-gray-300"></i><span>Next.js</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Stack -->
-                    <div class="bg-pink-200/20 dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-2xl border-l-4 border-pink-500 transition hover:-translate-y-1 duration-300"
-                        data-aos="fade-up">
-                        <h3 class="text-xl font-semibold text-pink-500 mb-4">Technologies / Stack</h3>
-                        <div class="space-y-3 text-gray-900 dark:text-gray-400 text-sm">
-                            <div class="flex items-center gap-2"><i
-                                    class="fas fa-layer-group text-yellow-400"></i><span>MERN Stack</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fas fa-database text-green-400"></i><span>MongoDB</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fab fa-node-js text-orange-400"></i><span>Express.js</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fab fa-react text-cyan-400"></i><span>React.js</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fab fa-node text-indigo-400"></i><span>Node.js</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Tools -->
-                    <div class="bg-green-200/20 dark:bg-gray-900 p-6 rounded-xl shadow-md hover:shadow-2xl border-l-4 border-green-500 transition hover:-translate-y-1 duration-300"
-                        data-aos="fade-up">
-                        <h3 class="text-xl font-semibold text-green-500 mb-4">Developer Tools</h3>
-                        <div class="space-y-3 text-gray-900 dark:text-gray-400 text-sm">
-                            <div class="flex items-center gap-2"><i class="fab fa-github text-white"></i><span>Git /
-                                    GitHub</span></div>
-                            <div class="flex items-center gap-2"><i class="fas fa-terminal text-gray-400"></i><span>VS
-                                    Code</span></div>
-                            <div class="flex items-center gap-2"><i class="fas fa-bug text-red-400"></i><span>Chrome
-                                    DevTools</span></div>
-                            <div class="flex items-center gap-2"><i
-                                    class="fas fa-check-circle text-green-300"></i><span>Postman</span></div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Connect -->
-        <section id="contact" class="bg-[#f9f9f9] dark:bg-gray-950 py-20 px-7">
-            <div class="max-w-5xl mx-auto">
-                <h2 class="text-5xl font-bold text-center mb-12 text-blue-500">
-                    Let's Connect
-                </h2>
-
-                <div class="flex flex-col md:flex-row justify-between gap-12" data-aos="fade-up">
-                    <div class="md:w-1/2 space-y-6">
-                        <p class="text-lg">
-                            Whether you want to collaborate, ask a question, or just say hi — I'm happy to chat.
-                        </p>
-
-                        <div class="space-y-3">
-                            <div class="flex items-center gap-3">
-                                <i class="fas fa-envelope text-blue-400"></i>
-                                <a href="mailto:youremail@example.com"
-                                    class="hover:text-blue-400 transition">harsh16022005@gmail.com</a>
-                            </div>
-
-                            <div class="flex items-center gap-3">
-                                <i class="fas fa-phone text-green-400"></i>
-                                <span>+91 84889 16478</span>
-                            </div>
-
-                        </div>
-                        <br><br>
-                        <p class="sm:text-2xl font-semibold">Connect us on:</p>
-                        <div class="flex gap-6 pt-0 text-2xl">
-                            <a href="https://www.linkedin.com/in/harsh-gupta-5587b528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                                target="_blank" class="text-blue-500 hover:text-blue-300 transition">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://www.instagram.com/harsh_gupta16_?utm_source=qr&igsh=NmpnZmVzN3FxZDE0"
-                                target="_blank" class="text-pink-500 hover:text-pink-300 transition">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://twitter.com/yourprofile" target="_blank"
-                                class="text-sky-400 hover:text-sky-200 transition">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="https://github.com/harshgupta-16" target="_blank"
-                                class="text-gray-400 hover:text-white transition">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="md:w-1/2">
-                        <form id="contactForm"
-                            class="space-y-5 backdrop-blur-md bg-white/60 dark:bg-white/10 border border-gray-300 dark:border-white/20 shadow-lg rounded-xl p-6 transition-all duration-300">
-
-                            <input type="text" name="name" placeholder="Your Name" required
-                                class="w-full border border-gray-400 dark:border-white/30 px-4 py-3 bg-white/70 dark:bg-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-
-                            <input type="email" name="email" placeholder="Your Email" required
-                                class="w-full border border-gray-400 dark:border-white/30 px-4 py-3 bg-white/70 dark:bg-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-
-                            <textarea rows="5" name="message" placeholder="Your Message" required
-                                class="w-full border border-gray-400 dark:border-white/30 px-4 py-3 bg-white/70 dark:bg-white/10 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-
-                            <button type="submit"
-                                class="w-full bg-blue-600 hover:bg-blue-800 transition px-6 py-3 rounded-lg text-white font-semibold shadow-md hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-400">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <hr>
-
-        <!-- Footer -->
-        <footer class="bg-gray-900 text-gray-300 pt-10 pb-5 px-7 relative">
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row flex-wrap justify-between gap-10">
-
-                <div class="w-full md:w-1/6">
-                    <h2 class="text-2xl font-bold text-white mb-3">Harsh Gupta</h2>
-                    <p class="text-gray-400">Building beautiful, responsive web experiences.</p>
-                </div>
-
-                <div class="w-full md:w-1/6">
-                    <h3 class="text-xl font-semibold mb-3 text-white">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-blue-400 transition">Home</a></li>
-                        <li><a href="#about" class="hover:text-blue-400 transition">About</a></li>
-                        <li><a href="#projects" class="hover:text-blue-400 transition">Projects</a></li>
-                        <li><a href="#skills" class="hover:text-blue-400 transition">Skills</a></li>
-                        <li><a href="#certificates" class="hover:text-blue-400 transition">Certificates</a></li>
-                        <li><a href="#contact" class="hover:text-blue-400 transition">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="w-full md:w-2/6">
-                    <h3 class="text-xl font-semibold text-white mb-3">📍 Location</h3>
-                    <p class="text-gray-400 text-sm">Bhopal, India</p>
-                    <iframe class="w-full rounded-lg mt-2" height="120" style="border:0" loading="lazy" allowfullscreen
-                        referrerpolicy="no-referrer-when-downgrade"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.738181844256!2d77.41261517473464!3d23.259933313258675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43f2f4cb3c15%3A0x19c088a25b48255c!2sBhopal%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1717769999999!5m2!1sen!2sin">
-                    </iframe>
-
-                </div>
-
-                <div class="w-full md:w-1/6">
-                    <h3 class="text-xl font-semibold mb-3 text-white">Follow Me</h3>
-                    <div class="flex gap-5 text-2xl">
-                        <a href="https://www.linkedin.com/in/harsh-gupta-5587b528a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                            class="text-blue-500 hover:text-blue-300 transition"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/harsh_gupta16_?utm_source=qr&igsh=NmpnZmVzN3FxZDE0"
-                            class="text-pink-500 hover:text-pink-300 transition"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com/yourprofile" class="text-sky-400 hover:text-sky-200 transition"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="https://github.com/harshgupta-16" class="text-gray-400 hover:text-white transition"><i
-                                class="fab fa-github"></i></a>
-                    </div>
-                </div>
             </div>
 
-            <div class="max-w-2xl mx-auto mt-12 text-center">
-                <h3 class="text-xl font-semibold text-white mb-4">📬 Subscribe to My Newsletter</h3>
-                <form class="flex flex-col sm:flex-row gap-3 items-center justify-center">
-                    <input type="email" placeholder="Enter your email" required
-                        class="w-full sm:w-2/3 px-4 py-3 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <button type="submit"
-                        class="bg-blue-600 px-6 py-3 rounded-lg text-white hover:bg-blue-800 transition">Subscribe</button>
-                </form>
-            </div>
-
-            <div class="border-t border-gray-700 mt-12 pt-5 text-center text-sm text-gray-500">
-                © 2025 Harsh. All rights reserved.
-            </div>
-
-            <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
-                class="fixed bottom-5 left-5 bg-blue-600 text-white h-10 w-10 rounded-full shadow-lg hover:bg-blue-800 transition z-50">
-                <i class="fas fa-arrow-up"></i>
-            </button>
-        </footer>
-
-
-        <!-- Chatbot Container -->
-        <div id="chatbot-container"
-            class="fixed bottom-24 right-5 w-80 h-[65vh] bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl shadow-lg z-50 flex flex-col overflow-hidden hidden group">
-
-            <!-- Chat Messages Area -->
-            <div id="chatbox"
-                class="flex-1 px-2 py-3 my-3 space-y-2 overflow-y-auto text-sm text-gray-800 dark:text-gray-100">
-                <!-- Messages will go here -->
-            </div>
-
-            <!-- Input Field -->
-            <div class="border-t border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 p-3">
-                <input id="chat-input" type="text" placeholder="Ask me something..."
-                    class="w-full px-3 py-2 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none" />
+            <div class="navbar-actions">
+                <a href="https://drive.google.com/file/d/1sElPIvjIWh1iWV6wMVF07t1kWbLiV6xY/view?usp=sharing" target="_blank"
+                    rel="noopener noreferrer" class="btn-resume">
+                    Resume <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.65rem;"></i>
+                </a>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
+    </nav>
 
-        <!-- Chat Toggle Button -->
-        <button id="chatbotBtn" onclick="toggleChat()"
-            class="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-blue-600 text-white shadow-xl flex items-center justify-center hover:bg-blue-700 transition-transform transform hover:scale-110 z-50">
-            <i class="fas fa-robot text-2xl"></i>
-        </button>
-
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="https://drive.google.com/file/d/1VP_K8Jibus8Hc1SyTEKspzBP-Qo2pz8B/view" target="_blank"
+            rel="noopener noreferrer" class="btn-resume">
+            Resume <i class="fas fa-arrow-up-right-from-square" style="font-size: 0.65rem;"></i>
+        </a>
     </div>
 
+    <!-- ============================================
+         HERO
+         ============================================ -->
+    <section class="hero section" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <span class="hero-greeting reveal">Hello, I'm</span>
+                    <h1 class="hero-name reveal">Harsh Gupta<span class="text-gradient">.</span></h1>
+
+                    <div class="hero-roles reveal">
+                        <span class="hero-role">Full Stack Developer</span>
+                        <span class="hero-role">Competitive Programmer</span>
+                        <span class="hero-role">Problem Solver</span>
+                    </div>
+
+                    <p class="hero-intro reveal">
+                        B.Tech student at <strong>IIIT Bhopal</strong>, building high-performance web applications
+                        and solving complex problems. Smart India Hackathon National Finalist, Software Development
+                        Intern, and passionate programmer.
+                    </p>
+
+                    <div class="hero-ctas reveal">
+                        <a href="#projects" class="btn-primary">
+                            View Projects <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            Get in Touch <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper reveal-right">
+                    <div class="hero-image-frame">
+                        <img src="./images/profile.jpg" alt="Harsh Gupta — Full Stack Developer" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievement Stats Strip -->
+            <div class="hero-stats reveal">
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="1750">0</div>
+                    <div class="hero-stat-label">LeetCode Rating</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number" data-count="1000">0</div>
+                    <div class="hero-stat-label">Problems Solved</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">Top 5</div>
+                    <div class="hero-stat-label">SIH National Finalist</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">3rd</div>
+                    <div class="hero-stat-label">IEEE Tech Quiz</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number"><i class="fas fa-code-branch" style="font-size: 1rem;"></i></div>
+                    <div class="hero-stat-label">GSSoC Contributor</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number"><i class="fas fa-briefcase" style="font-size: 1rem;"></i></div>
+                    <div class="hero-stat-label">SDE Intern</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ============================================
+         ABOUT
+         ============================================ -->
+    <section class="section" id="about">
+        <div class="container">
+            <span class="section-label reveal">About</span>
+            <h2 class="section-heading reveal">A bit about me</h2>
+
+            <p class="about-pullquote reveal">
+                I'm a <strong>full-stack developer</strong> and <strong>competitive programmer</strong> from
+                IIIT Bhopal, passionate about transforming complex problems into clean, efficient, and
+                user-friendly digital experiences.
+            </p>
+
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <img src="./images/about.jpg" alt="Harsh Gupta working" />
+                </div>
+
+                <div class="about-text reveal-right">
+                    <p>
+                        I'm currently pursuing my <strong>B.Tech in Electronics and Communication Engineering</strong>
+                        at IIIT Bhopal, where I've built a strong foundation in software development alongside my
+                        core studies. My journey into tech started with competitive programming, where I've solved
+                        <strong>1000+ problems</strong> and achieved a <strong>1750+ rating on LeetCode</strong>.
+                    </p>
+                    <p>
+                        With hands-on experience across the <strong>MERN stack</strong>, I specialize in building
+                        responsive, interactive web applications — from Chrome extensions and video template editors
+                        to cloud storage platforms and real-time learning tools. I thrive on learning new technologies
+                        and contributing to open-source projects.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new frameworks, participating in hackathons,
+                        or mentoring peers in data structures and algorithms.
+                    </p>
+
+                    <div class="about-highlights">
+                        <span class="about-tag">IIIT Bhopal</span>
+                        <span class="about-tag">Full Stack Dev</span>
+                        <span class="about-tag">Competitive Programming</span>
+                        <span class="about-tag">MERN Stack</span>
+                        <span class="about-tag">Open Source</span>
+                        <span class="about-tag">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ============================================
+         EXPERIENCE
+         ============================================ -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <span class="section-label reveal">Experience</span>
+            <h2 class="section-heading reveal">Where I've worked</h2>
+            <p class="section-desc reveal" style="margin-bottom: 48px;">
+                Professional experience building real-world applications and solving engineering challenges.
+            </p>
+
+            <div class="experience-timeline">
+                <!-- Fullscreens Technologies -->
+                <div class="experience-item reveal">
+                    <div class="experience-dot"></div>
+                    <div class="experience-header">
+                        <h3 class="experience-company">Fullscreens Technologies</h3>
+                        <span class="experience-date">2025</span>
+                    </div>
+                    <p class="experience-role">Software Developer Intern</p>
+                    <div class="experience-points">
+                        <p class="experience-point">
+                            Built a scalable React-based canvas video editor with modular components and
+                            multi-resolution preview support across 50+ screen formats, reducing layout bugs by 30%.
+                        </p>
+
+                        <p class="experience-point">
+                            Optimized Remotion rendering workflows through FPS and timeline configuration, reducing
+                            export errors and enabling automated generation of ad videos for 10+ aspect ratios.
+                        </p>
+
+                        <p class="experience-point">
+                            Developed a full-stack platform with real-time iframe rendering, versioned APIs, and cached
+                            backend storage, reducing template onboarding time by 40%.
+                        </p>
+                    </div>
+                    <div class="experience-tech">
+                        <span class="tech-badge">Javascript</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                        <span class="tech-badge">Remotion</span>
+                        <span class="tech-badge">Express</span>
+                        <span class="tech-badge">REST APIs</span>
+                    </div>
+                </div>
+
+                <!-- EazyBytes -->
+                <div class="experience-item reveal">
+                    <div class="experience-dot"></div>
+                    <div class="experience-header">
+                        <h3 class="experience-company">EazyBytes</h3>
+                        <span class="experience-date">2026</span>
+                    </div>
+                    <p class="experience-role">Web Developer Intern</p>
+                    <div class="experience-points">
+                        <p class="experience-point">
+                            Built a Manifest V3 Chrome extension for language learning with dual subtitles across
+                            Netflix, YouTube, and Prime Video, reducing redundant translation API calls by 80%.
+                        </p>
+
+                        <p class="experience-point">
+                            Engineered a cross-platform subtitle processing pipeline supporting WebVTT, TTML, and JSON
+                            formats, improving caption synchronization accuracy by 90%.
+                        </p>
+
+                        <p class="experience-point">
+                            Reduced translation latency by 75% through progressive chunk-based processing and
+                            asynchronous background batching.
+                        </p>
+
+                        <p class="experience-point">
+                            Implemented hover-based vocabulary lookup, text-to-speech playback, and contextual
+                            translations to enhance real-time language learning.
+                        </p>
+                    </div>
+                    <div class="experience-tech">
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Manifest V3</span>
+                        <span class="tech-badge">Chrome APIs</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">REST APIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ============================================
+         PROJECTS
+         ============================================ -->
+    <section class="section" id="projects">
+        <div class="container">
+            <span class="section-label reveal">Projects</span>
+            <h2 class="section-heading reveal">Things I've built</h2>
+            <p class="section-desc reveal" style="margin-bottom: 64px;">
+                A selection of projects that showcase my skills in full-stack development, problem solving,
+                and building user-centric applications.
+            </p>
+
+            <div class="projects-list">
+
+                <!-- ===== CloudVault (Featured) ===== -->
+                <div class="project-case featured reveal-scale">
+                    <div class="project-image">
+                        <img src="./images/cloudvault.png" alt="CloudVault — Secure Cloud Storage Platform" />
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">Featured Project</span>
+                        <h3 class="project-title">CloudVault</h3>
+                        <p class="project-overview">
+                            A secure cloud storage platform that provides seamless file management with
+                            AWS S3 integration, user authentication, and an intuitive drag-and-drop interface.
+                        </p>
+                        <div class="project-features">
+                            <p class="project-feature">Secure file upload and download with AWS S3 bucket storage</p>
+                            <p class="project-feature">User authentication and authorization with JWT tokens</p>
+                            <p class="project-feature">Folder management, file sharing, and access control</p>
+                            <p class="project-feature">Responsive dashboard with real-time storage analytics</p>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">MongoDB</span>
+                            <span class="tech-badge">AWS S3</span>
+                        </div>
+                        <p class="project-impact">
+                            Full-stack cloud application demonstrating end-to-end architecture with secure cloud
+                            infrastructure.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== INCOIS Sea Guardian ===== -->
+                <div class="project-case reverse reveal-scale">
+                    <div class="project-image">
+                        <img src="./images/incois.png" alt="INCOIS Sea Guardian — Maritime Monitoring System" />
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">Hackathon Project — SIH 2023</span>
+                        <h3 class="project-title">INCOIS Sea Guardian</h3>
+                        <p class="project-overview">
+                            A maritime monitoring and analysis system developed for Smart India Hackathon 2023,
+                            providing real-time ocean data visualization, vessel tracking, and alert systems
+                            for coastal safety.
+                        </p>
+                        <div class="project-features">
+                            <p class="project-feature">Real-time ocean data visualization with interactive maps</p>
+                            <p class="project-feature">Vessel tracking and maritime route analysis</p>
+                            <p class="project-feature">Automated alert system for coastal safety monitoring</p>
+                            <p class="project-feature">Data analytics dashboard with historical trend analysis</p>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">MongoDB</span>
+                        </div>
+                        <p class="project-impact">
+                            Top 5 National Finalist at Smart India Hackathon 2023, competing against teams nationwide.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== Gaming Arcade (Reversed) ===== -->
+                <div class="project-case featured reveal-scale">
+                    <div class="project-image">
+                        <img src="./images/gamingarcade.png" alt="Gaming Arcade — Interactive Web Games" />
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">Personal Project</span>
+                        <h3 class="project-title">Gaming Arcade</h3>
+                        <p class="project-overview">
+                            A responsive gaming arcade featuring four interactive web games — Tic-Tac-Toe,
+                            Block Breaker, Memory Game, and a Candy Crush clone — all optimized for fast loading
+                            and smooth gameplay.
+                        </p>
+                        <div class="project-features">
+                            <p class="project-feature">Four fully playable browser games with responsive design</p>
+                            <p class="project-feature">Modular JavaScript architecture for maintainability</p>
+                            <p class="project-feature">Optimized performance with sub-2.5s load times</p>
+                            <p class="project-feature">Touch-friendly controls for mobile gameplay</p>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">HTML</span>
+                            <span class="tech-badge">CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Tailwind CSS</span>
+                        </div>
+                        <p class="project-impact">
+                            Demonstrates frontend engineering skills with interactive, performance-optimized web
+                            applications.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://gaming-arcade-sigma.vercel.app/" class="project-link primary"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/harshgupta-16/GamingArcade.github.io" class="project-link"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== Spice Route Express ===== -->
+                <div class="project-case reverse reveal-scale">
+                    <div class="project-image">
+                        <img src="./images/spiceroute.png" alt="Spice Route Express — Food Ordering Platform" />
+                    </div>
+                    <div class="project-content">
+                        <span class="project-label">Full Stack Project</span>
+                        <h3 class="project-title">Spice Route Express</h3>
+                        <p class="project-overview">
+                            A full-stack food ordering platform with restaurant browsing, menu management,
+                            cart functionality, and order tracking — built for a seamless dining experience.
+                        </p>
+                        <div class="project-features">
+                            <p class="project-feature">Restaurant discovery with search and filter functionality</p>
+                            <p class="project-feature">Dynamic menu management with real-time cart updates</p>
+                            <p class="project-feature">User authentication and order history tracking</p>
+                            <p class="project-feature">Responsive design optimized for mobile ordering</p>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">MongoDB</span>
+                            <span class="tech-badge">Tailwind CSS</span>
+                        </div>
+                        <p class="project-impact">
+                            End-to-end full-stack application demonstrating MERN stack expertise with production-ready
+                            architecture.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ============================================
+         COMPETITIVE PROGRAMMING
+         ============================================ -->
+    <section class="section cp-section" id="competitive-programming">
+        <div class="container">
+            <span class="section-label reveal">Competitive Programming</span>
+            <h2 class="section-heading reveal">Solving problems, one algorithm at a time</h2>
+
+            <div class="cp-stats reveal">
+                <div class="cp-stat-card">
+                    <div class="cp-stat-number" data-count="1750">0</div>
+                    <div class="cp-stat-title">LeetCode Rating</div>
+                    <div class="cp-stat-desc">Consistently improving through daily practice</div>
+                </div>
+                <div class="cp-stat-card">
+                    <div class="cp-stat-number" data-count="1000">0</div>
+                    <div class="cp-stat-title">Problems Solved</div>
+                    <div class="cp-stat-desc">Across LeetCode, Codeforces, and other platforms</div>
+                </div>
+            </div>
+
+            <div class="cp-topics reveal">
+                <p class="cp-topics-label">Areas of Strength</p>
+                <div class="cp-topic-list">
+                    <span class="cp-topic">Graph Algorithms</span>
+                    <span class="cp-topic">Dynamic Programming</span>
+                    <span class="cp-topic">Trees & Binary Search</span>
+                    <span class="cp-topic">Greedy Algorithms</span>
+                    <span class="cp-topic">Two Pointers</span>
+                    <span class="cp-topic">Sliding Window</span>
+                    <span class="cp-topic">Backtracking</span>
+                    <span class="cp-topic">Stack & Queue</span>
+                </div>
+            </div>
+
+            <p class="cp-narrative reveal">
+                My competitive programming journey began in my first year at IIIT Bhopal. What started as solving
+                basic array problems quickly evolved into a deep passion for algorithmic thinking. I've developed
+                strong problem-solving intuition across graph theory, dynamic programming, and tree-based
+                algorithms — skills that directly translate into writing better production code.
+            </p>
+        </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ============================================
+         SKILLS (TECHNOLOGY ECOSYSTEM)
+         ============================================ -->
+    <section class="section" id="skills">
+        <div class="container">
+            <span class="section-label reveal">Technology Ecosystem</span>
+            <h2 class="section-heading reveal">My Tech Stack</h2>
+            <p class="section-desc reveal" style="margin-bottom: 48px;">
+                The technologies I use to build scalable products and solve real-world problems.
+            </p>
+
+            <div class="skills-wheels-grid">
+                <!-- Languages Wheel -->
+                <div class="skill-wheel languages-wheel">
+                    <div class="wheel-center">
+                        <div class="center-title">Languages</div>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:0; --total:5;">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        <span>C++</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:1; --total:5;">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:2; --total:5;">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:3; --total:5;">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:4; --total:5;">
+                        <i class="devicon-mysql-plain colored"></i>
+                        <span>SQL</span>
+                    </div>
+
+                </div>
+
+                <!-- Libraries & Frameworks Wheel -->
+                <div class="skill-wheel frameworks-wheel">
+                    <div class="wheel-center">
+                        <div class="center-title">Libraries &<br>Frameworks</div>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:0; --total:4;">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:1; --total:4;">
+                        <i class="devicon-bootstrap-plain colored"></i>
+                        <span>Bootstrap</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:2; --total:4;">
+                        <i class="devicon-tailwindcss-original colored"></i>
+                        <span>Tailwind</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:3; --total:4;">
+                        <i class="devicon-nextjs-plain"></i>
+                        <span>Next.js</span>
+                    </div>
+
+
+                </div>
+
+                <!-- Technologies Stack Wheel -->
+                <div class="skill-wheel technologies-wheel">
+                    <div class="wheel-center">
+                        <div class="center-title">Technologies/<br>Stack</div>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:0; --total:5;">
+                        <i class="devicon-mongodb-plain colored"></i>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="wheel-skill" style="--i:1; --total:5;">
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="wheel-skill" style="--i:2; --total:5;">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="wheel-skill" style="--i:3; --total:5;">
+                        <i class="devicon-express-original"></i>
+                        <span>Express</span>
+                    </div>
+                    <div class="wheel-skill" style="--i:4; --total:5;">
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Developer Tools Wheel -->
+                <div class="skill-wheel tools-wheel">
+                    <div class="wheel-center">
+                        <div class="center-title">Developer<br>Tools</div>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:0; --total:6;">
+                        <i class="devicon-git-plain colored"></i>
+                        <span>Git</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:1; --total:6;">
+                        <i class="devicon-github-original"></i>
+                        <span>GitHub</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:2; --total:6;">
+                        <i class="devicon-vscode-plain colored"></i>
+                        <span>VS Code</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:3; --total:6;">
+                        <i class="devicon-chrome-plain colored"></i>
+                        <span>DevTools</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:4; --total:6;">
+                        <i class="devicon-postman-plain colored"></i>
+                        <span>Postman</span>
+                    </div>
+
+                    <div class="wheel-skill" style="--i:5; --total:6;">
+                        <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+                        <span>AWS S3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ============================================
+         ACHIEVEMENTS
+         ============================================ -->
+    <section class="section section-alt" id="achievements">
+        <div class="container">
+            <span class="section-label reveal">Achievements</span>
+            <h2 class="section-heading reveal">Recognition & milestones</h2>
+
+            <div class="achievements-grid stagger">
+                <!-- SIH -->
+                <div class="achievement-item reveal">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">Smart India Hackathon — National Finalist</h3>
+                        <p class="achievement-desc">
+                            Selected among the top 5 teams nationwide in SIH 2023 for developing INCOIS Sea Guardian,
+                            a maritime monitoring solution for coastal safety.
+                        </p>
+                        <span class="achievement-badge gold">Top 5 Nationwide</span>
+                    </div>
+                </div>
+
+                <!-- IEEE -->
+                <div class="achievement-item reveal">
+                    <div class="achievement-icon">🥉</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">IEEE Tech Quiz — 3rd Rank</h3>
+                        <p class="achievement-desc">
+                            Secured 3rd position in a technical quiz competition organized by the IEEE Club,
+                            covering coding, AI, machine learning, and computer science fundamentals.
+                        </p>
+                        <span class="achievement-badge blue">3rd Place</span>
+                    </div>
+                </div>
+
+                <!-- GSSoC -->
+                <div class="achievement-item reveal">
+                    <div class="achievement-icon">🌐</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">GSSoC — Open Source Contributor</h3>
+                        <p class="achievement-desc">
+                            Active contributor to GirlScript Summer of Code, contributing to open-source projects
+                            and collaborating with developers worldwide.
+                        </p>
+                        <span class="achievement-badge green">Open Source</span>
+                    </div>
+                </div>
+
+                <!-- LeetCode -->
+                <div class="achievement-item reveal">
+                    <div class="achievement-icon">⚡</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-title">LeetCode — 1750+ Rating</h3>
+                        <p class="achievement-desc">
+                            Achieved 1750+ contest rating on LeetCode with 1000+ problems solved across
+                            multiple difficulty levels and algorithmic domains.
+                        </p>
+                        <span class="achievement-badge purple">1750+ Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ============================================
+         CONTACT
+         ============================================ -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <div class="contact-header">
+                        <span class="section-label">Contact</span>
+                        <h2 class="section-heading">Let's work together</h2>
+                        <p class="section-desc" style="margin-bottom: 32px;">
+                            Whether you have a project in mind, want to collaborate, or just want to say hello —
+                            I'd love to hear from you.
+                        </p>
+                    </div>
+
+                    <div class="contact-details">
+                        <a href="mailto:harsh16022005@gmail.com" class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span>harsh16022005@gmail.com</span>
+                        </a>
+                        <a href="tel:+918488916478" class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <span>+91 84889 16478</span>
+                        </a>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span>Bhopal, India</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/harsh-gupta-5587b528a" target="_blank"
+                            rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/harshgupta-16" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/harsh_gupta16_" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper reveal-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label class="form-label" for="contact-name">Name</label>
+                            <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your name"
+                                required />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">Email</label>
+                            <input type="email" id="contact-email" name="email" class="form-input"
+                                placeholder="your@email.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" class="form-textarea"
+                                placeholder="Tell me about your project or just say hi..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            Send Message <i class="fas fa-paper-plane" style="margin-left: 6px;"></i>
+                        </button>
+                        <div class="form-status" id="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy">
+                    © 2025 <strong>Harsh Gupta</strong>. Crafted with care.
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/harshgupta-16" target="_blank" rel="noopener noreferrer"
+                        class="footer-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/harsh-gupta-5587b528a" target="_blank"
+                        rel="noopener noreferrer" class="footer-link">
+                        <i class="fab fa-linkedin-in"></i> LinkedIn
+                    </a>
+                    <a href="mailto:harsh16022005@gmail.com" class="footer-link">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- JavaScript -->
     <script src="main.js"></script>
-
 
 </body>
 
